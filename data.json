@@ -15,7 +15,7 @@
       "montant": 15.52,
       "categorie": "🛍️ Shopping",
       "type": "debit",
-      "isPrevision": true
+      "isPrevision": false
     },
     {
       "id": "1785102312905",
