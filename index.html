@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="https://img.icons8.com/color/512/euro-house.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Mes Comptes</title>
   
-  <!-- Chart.js pour le graphique -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <style>
@@ -43,6 +43,7 @@
       margin-bottom: 16px;
     }
     .header h1 { font-size: 1.4rem; font-weight: 700; margin: 0; }
+    .header-actions { display: flex; gap: 4px; }
     .btn-icon { background: none; border: none; font-size: 1.2rem; cursor: pointer; padding: 6px; }
 
     /* Dashboard */
@@ -65,7 +66,7 @@
       color: #cbd5e1;
     }
 
-    /* Résumé du Mois & Graphique */
+    /* Stats */
     .stats-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -203,7 +204,10 @@
 
   <div class="header">
     <h1>Mon Compte</h1>
-    <button class="btn-icon" onclick="ouvrirConfig()">⚙️</button>
+    <div class="header-actions">
+      <button class="btn-icon" title="Rafraîchir" onclick="chargerDonnees()">🔄</button>
+      <button class="btn-icon" title="Réglages" onclick="ouvrirConfig()">⚙️</button>
+    </div>
   </div>
 
   <div class="dashboard-card">
@@ -337,7 +341,6 @@
     let chartInstance = null;
     let enteredPin = "";
 
-    // GESTION VERROUILLAGE PIN
     function initSecurity() {
       const savedPin = localStorage.getItem('app_pin');
       if (savedPin && savedPin.length === 4) {
@@ -468,7 +471,7 @@
       const { user, repo, token } = getConfig();
       if (!user || !repo || !token) { ouvrirConfig(); return; }
 
-      const url = `https://api.github.com/repos/${user}/${repo}/contents/data.json`;
+      const url = `https://api.github.com/repos/${user}/${repo}/contents/data.json?timestamp=${Date.now()}`;
       try {
         const res = await fetch(url, { headers: { Authorization: `token ${token}` } });
         const file = await res.json();
@@ -485,7 +488,6 @@
       let ops = rawData.operations || [];
       ops.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-      // Calcul des soldes globaux
       let soldeActuel = 0;
       let soldePrev = 0;
       let mCredit = 0;
@@ -499,7 +501,6 @@
         soldePrev += val;
         if (!op.isPrevision) soldeActuel += val;
 
-        // Stats mois en cours
         const d = new Date(op.date);
         const my = d.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
         if (my === currentMonthYear && !op.isPrevision) {
@@ -513,7 +514,6 @@
       document.getElementById('statCredit').innerText = `+${mCredit.toFixed(2)} €`;
       document.getElementById('statDebit').innerText = `-${mDebit.toFixed(2)} €`;
 
-      // Application des filtres & recherche
       const searchQuery = document.getElementById('searchInput').value.toLowerCase();
       ops = ops.filter(op => {
         const matchSearch = op.description.toLowerCase().includes(searchQuery) || (op.categorie && op.categorie.toLowerCase().includes(searchQuery));
@@ -525,7 +525,6 @@
         return true;
       });
 
-      // Construction de la liste
       const groupesParMois = {};
       ops.forEach(op => {
         const d = new Date(op.date);
@@ -625,7 +624,9 @@
       if (putRes.ok) {
         fermerModalOp();
         fermerConfig();
-        await chargerDonnees();
+        // Mise à jour directe de l'affichage local + rechargement différé GitHub
+        afficherDonnees();
+        setTimeout(chargerDonnees, 1500);
       } else {
         alert("Erreur de mise à jour sur GitHub.");
       }
