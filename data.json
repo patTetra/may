@@ -1,0 +1,12 @@
+{
+  "operations": [
+    {
+      "id": "1",
+      "date": "2026-07-26",
+      "description": "Solde initial",
+      "montant": 1000.00,
+      "type": "credit",
+      "statut": "realise"
+    }
+  ]
+}
