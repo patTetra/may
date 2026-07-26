@@ -9,19 +9,19 @@
       "isPrevision": false
     },
     {
-      "id": "1785102312905",
-      "date": "2026-07-25",
-      "description": "Sac",
-      "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
       "id": "1785103426528",
       "date": "2026-07-26",
       "description": "pour Patrick ",
       "montant": 25.85,
       "categorie": "🛍️ Shopping",
+      "type": "debit",
+      "isPrevision": true
+    },
+    {
+      "id": "1785102312905",
+      "date": "2026-07-25",
+      "description": "Sac",
+      "montant": 131.65,
       "type": "debit",
       "isPrevision": false
     }
