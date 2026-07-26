@@ -324,7 +324,6 @@
 
   <script>
     let rawData = { operations: [] };
-    let fileSha = "";
     let currentType = "debit";
 
     function setType(type) {
@@ -397,7 +396,6 @@
       try {
         const res = await fetch(url, { headers: { Authorization: `token ${token}` } });
         const file = await res.json();
-        fileSha = file.sha;
         
         const content = decodeURIComponent(escape(atob(file.content)));
         rawData = JSON.parse(content);
@@ -465,28 +463,41 @@
       document.getElementById('historiqueContainer').innerHTML = html || "<p style='text-align:center; color:#94a3b8;'>Aucune opération enregistrée.</p>";
     }
 
+    // FONCTION MISE À JOUR AVEC RECUPERATION DU SHA EN DIRECT
     async function pushToGitHub(commitMessage) {
       const { user, repo, token } = getConfig();
       const url = `https://api.github.com/repos/${user}/${repo}/contents/data.json`;
+      
+      // 1. Récupération du SHA le plus récent
+      const getRes = await fetch(url, { headers: { Authorization: `token ${token}` } });
+      if (!getRes.ok) {
+        alert("Impossible de lire la donnée sur GitHub. Vérifie ton Token.");
+        return;
+      }
+      const fileData = await getRes.json();
+      const latestSha = fileData.sha;
+
+      // 2. Envoi de la mise à jour
       const nouveauContenuJSON = JSON.stringify(rawData, null, 2);
       const contentBase64 = btoa(unescape(encodeURIComponent(nouveauContenuJSON)));
 
-      const res = await fetch(url, {
+      const putRes = await fetch(url, {
         method: 'PUT',
         headers: { Authorization: `token ${token}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: commitMessage,
           content: contentBase64,
-          sha: fileSha
+          sha: latestSha
         })
       });
 
-      if (res.ok) {
+      if (putRes.ok) {
         fermerModalOp();
         fermerConfig();
         await chargerDonnees();
       } else {
-        alert("Erreur lors de la mise à jour GitHub.");
+        const errorDetail = await putRes.json();
+        alert(`Erreur de mise à jour (${putRes.status}) : ${errorDetail.message || 'Vérifie les droits de ton token'}`);
       }
     }
 
@@ -545,7 +556,6 @@
       const confirmation = confirm(`⚠️ ATTENTION : Cela va effacer toutes les opérations actuelles.\n\nSouhaites-tu réinitialiser le compte avec un solde de départ de ${montantDepartVal.toFixed(2)} € ?`);
       if (!confirmation) return;
 
-      // On reconstruit un tableau vierge avec l'opération de départ
       const aujourdhui = new Date().toISOString().split('T')[0];
       rawData.operations = [
         {
