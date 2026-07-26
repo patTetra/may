@@ -3,128 +3,317 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestion de Compte</title>
+  <title>Mes Comptes</title>
   <style>
     :root {
-      --bg: #f4f6f8;
-      --card: #ffffff;
-      --text: #1f2937;
-      --green: #10b981;
-      --red: #ef4444;
-      --blue: #2563eb;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --primary: #2563eb;
+      --primary-light: #eff6ff;
+      --green: #16a34a;
+      --red: #dc2626;
+      --radius: 16px;
     }
+
+    * { box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
       margin: 0;
-      padding: 15px;
-      max-width: 500px;
+      padding: 20px 16px 100px 16px;
+      max-width: 480px;
       margin-left: auto;
       margin-right: auto;
     }
-    .card {
-      background: var(--card);
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin-bottom: 15px;
-    }
-    h2, h3 { margin-top: 0; }
-    .solde-container {
-      display: flex;
-      justify-content: space-between;
-      text-align: center;
-    }
-    .solde-box { flex: 1; }
-    .solde-valeur { font-size: 1.4rem; font-weight: bold; }
-    form { display: flex; flex-direction: column; gap: 10px; }
-    input, select, button {
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    button {
-      background: var(--blue);
-      color: white;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .operation {
+
+    /* En-tête / Profil */
+    .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
+      margin-bottom: 20px;
     }
-    .operation:last-child { border-bottom: none; }
-    .debit { color: var(--red); font-weight: bold; }
-    .credit { color: var(--green); font-weight: bold; }
-    .prevision { opacity: 0.5; font-style: italic; }
-    .tag-prev { font-size: 0.7rem; background: #e5e7eb; padding: 2px 6px; border-radius: 4px; }
-    .config-sec { font-size: 0.8rem; color: #666; }
+    .header h1 { font-size: 1.5rem; font-weight: 700; margin: 0; }
+    .btn-icon {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* Carte des Soldes */
+    .dashboard-card {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      color: white;
+      padding: 24px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+    }
+    .solde-label { font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; }
+    .solde-main { font-size: 2.2rem; font-weight: 800; margin: 6px 0 16px 0; }
+    .solde-prev-container {
+      border-top: 1px solid #334155;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    /* Historique & Groupement par mois */
+    .month-group { margin-bottom: 24px; }
+    .month-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .ops-list {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .operation-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .operation-item:last-child { border-bottom: none; }
+    .op-info { display: flex; flex-direction: column; gap: 4px; }
+    .op-desc { font-weight: 600; font-size: 0.95rem; }
+    .tag-prev {
+      font-size: 0.7rem;
+      background: #f1f5f9;
+      color: var(--text-muted);
+      padding: 2px 6px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+    .op-amount-block { text-align: right; }
+    .op-amount { font-weight: 700; font-size: 1rem; }
+    .op-amount.debit { color: var(--red); }
+    .op-amount.credit { color: var(--green); }
+    .op-date { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* Bouton Flottant (FAB) */
+    .fab {
+      position: fixed;
+      bottom: 24px;
+      right: calc(50% - 220px);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: 480px) { .fab { right: 24px; } }
+
+    /* Modal (Fenêtre flottante) */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 23, 42, 0.5);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 100;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-content {
+      background: var(--surface);
+      width: 100%;
+      max-width: 480px;
+      border-radius: 24px 24px 0 0;
+      padding: 24px;
+      animation: slideUp 0.25s ease-out;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .modal-header h2 { margin: 0; font-size: 1.2rem; }
+    
+    /* Formulaire */
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-size: 1rem;
+      background: var(--bg);
+    }
+    .form-control:focus { outline: 2px solid var(--primary); background: white; }
+    .type-selector { display: flex; gap: 8px; }
+    .type-btn {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .type-btn.active.debit { background: #fee2e2; color: var(--red); border-color: var(--red); }
+    .type-btn.active.credit { background: #dcfce7; color: var(--green); border-color: var(--green); }
+    
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 8px;
+      cursor: pointer;
+    }
+
+    /* Configuration Modal */
+    #configModal .modal-content { border-radius: var(--radius); margin: auto 16px; }
   </style>
 </head>
 <body>
 
-  <h2> Mon Compte</h2>
-
-  <!-- CONFIGURATION (Cachée après la 1ère saisie) -->
-  <div id="configCard" class="card">
-    <h3>⚙️ Configuration GitHub</h3>
-    <input type="text" id="ghUser" placeholder="Pseudo GitHub (ex: user)">
-    <input type="text" id="ghRepo" placeholder="Nom du dépô (ex: banque-app)">
-    <input type="password" id="ghToken" placeholder="Personal Access Token (ghp_...)">
-    <button onclick="sauvegarderConfig()">Enregistrer</button>
+  <!-- En-tête -->
+  <div class="header">
+    <h1>Mon Compte</h1>
+    <button class="btn-icon" onclick="ouvrirConfig()">⚙️</button>
   </div>
 
-  <!-- Bilan des soldes -->
-  <div class="card solde-container">
-    <div class="solde-box">
-      <div>Solde Actuel</div>
-      <div id="soldeActuel" class="solde-valeur">0,00 €</div>
-    </div>
-    <div class="solde-box">
-      <div>Prévisionnel</div>
-      <div id="soldePrevisionnel" class="solde-valeur">0,00 €</div>
+  <!-- Dashboard des Soldes -->
+  <div class="dashboard-card">
+    <div class="solde-label">Solde Actuel</div>
+    <div id="soldeActuel" class="solde-main">0,00 €</div>
+    <div class="solde-prev-container">
+      <span>Solde Prévisionnel</span>
+      <strong id="soldePrevisionnel">0,00 €</strong>
     </div>
   </div>
 
-  <!-- Formulaire d'ajout -->
-  <div class="card">
-    <h3> Nouvelle opération</h3>
-    <form id="opForm" onsubmit="ajouterOperation(event)">
-      <input type="date" id="dateOp" required>
-      <input type="text" id="descOp" placeholder="Description (ex: Courses)" required>
-      <input type="number" step="0.01" id="montantOp" placeholder="Montant (€)" required>
-      
-      <select id="typeOp">
-        <option value="debit">Débit (Dépense)</option>
-        <option value="credit">Crédit (Rentrée)</option>
-      </select>
+  <!-- Historique par mois -->
+  <div id="historiqueContainer">Chargement...</div>
 
-      <label style="display: flex; align-items: center; gap: 8px;">
-        <input type="checkbox" id="isPrevision"> Est-ce une prévision ?
-      </label>
+  <!-- Bouton d'ajout d'opération -->
+  <button class="fab" onclick="ouvrirModalOp()">+</button>
 
-      <button type="submit" id="btnSubmit">Ajouter</button>
-    </form>
+  <!-- MODAL SAISIE D'OPÉRATION -->
+  <div id="opModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Nouvelle opération</h2>
+        <button class="btn-icon" onclick="fermerModalOp()">✕</button>
+      </div>
+      <form onsubmit="ajouterOperation(event)">
+        <!-- Sélecteur Débit / Crédit -->
+        <div class="form-group type-selector">
+          <button type="button" id="btnTypeDebit" class="type-btn active debit" onclick="setType('debit')">Débit</button>
+          <button type="button" id="btnTypeCredit" class="type-btn credit" onclick="setType('credit')">Crédit</button>
+        </div>
+
+        <!-- Clavier numérique forcé pour le montant -->
+        <div class="form-group">
+          <label>Montant (€)</label>
+          <input type="number" step="0.01" inputmode="decimal" id="montantOp" class="form-control" placeholder="0.00" required>
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" id="descOp" class="form-control" placeholder="ex: Courses, Restaurant..." required>
+        </div>
+
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" id="dateOp" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+            <input type="checkbox" id="isPrevision"> Opération prévisionnelle
+          </label>
+        </div>
+
+        <button type="submit" id="btnSubmit" class="btn-submit">Valider</button>
+      </form>
+    </div>
   </div>
 
-  <!-- Liste des opérations -->
-  <div class="card">
-    <h3> Historique</h3>
-    <div id="listeOps">Chargement...</div>
+  <!-- MODAL CONFIGURATION -->
+  <div id="configModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Configuration GitHub</h2>
+        <button class="btn-icon" onclick="fermerConfig()">✕</button>
+      </div>
+      <div class="form-group">
+        <label>Pseudo GitHub</label>
+        <input type="text" id="ghUser" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Nom du Dépôt</label>
+        <input type="text" id="ghRepo" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Personal Access Token</label>
+        <input type="password" id="ghToken" class="form-control">
+      </div>
+      <button class="btn-submit" onclick="sauvegarderConfig()">Enregistrer</button>
+    </div>
   </div>
 
   <script>
     let rawData = { operations: [] };
     let fileSha = "";
+    let currentType = "debit";
 
-    // Mettre la date du jour par défaut
     document.getElementById('dateOp').valueAsDate = new Date();
+
+    function setType(type) {
+      currentType = type;
+      document.getElementById('btnTypeDebit').className = `type-btn debit ${type === 'debit' ? 'active' : ''}`;
+      document.getElementById('btnTypeCredit').className = `type-btn credit ${type === 'credit' ? 'active' : ''}`;
+    }
+
+    function ouvrirModalOp() {
+      document.getElementById('opModal').classList.add('open');
+      setTimeout(() => document.getElementById('montantOp').focus(), 100);
+    }
+    function fermerModalOp() { document.getElementById('opModal').classList.remove('open'); }
+    function ouvrirConfig() {
+      const { user, repo, token } = getConfig();
+      document.getElementById('ghUser').value = user || '';
+      document.getElementById('ghRepo').value = repo || '';
+      document.getElementById('ghToken').value = token || '';
+      document.getElementById('configModal').classList.add('open');
+    }
+    function fermerConfig() { document.getElementById('configModal').classList.remove('open'); }
 
     function getConfig() {
       return {
@@ -138,71 +327,83 @@
       localStorage.setItem('gh_user', document.getElementById('ghUser').value.trim());
       localStorage.setItem('gh_repo', document.getElementById('ghRepo').value.trim());
       localStorage.setItem('gh_token', document.getElementById('ghToken').value.trim());
-      document.getElementById('configCard').style.display = 'none';
+      fermerConfig();
       chargerDonnees();
     }
 
     async function chargerDonnees() {
       const { user, repo, token } = getConfig();
-      if (!user || !repo || !token) {
-        document.getElementById('configCard').style.display = 'block';
-        return;
-      }
-      document.getElementById('configCard').style.display = 'none';
+      if (!user || !repo || !token) { ouvrirConfig(); return; }
 
       const url = `https://api.github.com/repos/${user}/${repo}/contents/data.json`;
-      
       try {
         const res = await fetch(url, { headers: { Authorization: `token ${token}` } });
         const file = await res.json();
         fileSha = file.sha;
         
-        // Décodage de la donnée JSON reçue
         const content = decodeURIComponent(escape(atob(file.content)));
         rawData = JSON.parse(content);
-        
         afficherDonnees();
       } catch (e) {
-        alert("Erreur de chargement. Vérifie ton Token / Dépôt.");
+        alert("Erreur de connexion. Vérifie la configuration GitHub.");
       }
     }
 
     function afficherDonnees() {
       const ops = rawData.operations || [];
-      
-      // Trier par date du plus récent au plus ancien
       ops.sort((a, b) => new Date(b.date) - new Date(a.date));
 
       let soldeActuel = 0;
       let soldePrev = 0;
-      let html = "";
+      const groupesParMois = {};
 
       ops.forEach(op => {
         const val = op.type === 'debit' ? -Math.abs(op.montant) : Math.abs(op.montant);
-        
         soldePrev += val;
         if (!op.isPrevision) soldeActuel += val;
 
-        const classeType = op.type === 'debit' ? 'debit' : 'credit';
-        const classePrev = op.isPrevision ? 'prevision' : '';
-        const signe = op.type === 'debit' ? '-' : '+';
-
-        html += `
-          <div class="operation ${classePrev}">
-            <div>
-              <strong>${op.description}</strong> ${op.isPrevision ? '<span class="tag-prev">Prévision</span>' : ''}<br>
-              <small style="color: #666;">${op.date}</small>
-            </div>
-            <div class="${classeType}">
-              ${signe} ${Math.abs(op.montant).toFixed(2)} €
-            </div>
-          </div>
-        `;
+        // Groupement par Mois (ex: Juillet 2026)
+        const d = new Date(op.date);
+        const moisAnnee = d.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+        
+        if (!groupesParMois[moisAnnee]) groupesParMois[moisAnnee] = [];
+        groupesParMois[moisAnnee].push(op);
       });
 
       document.getElementById('soldeActuel').innerText = `${soldeActuel.toFixed(2)} €`;
       document.getElementById('soldePrevisionnel').innerText = `${soldePrev.toFixed(2)} €`;
-      document.getElementById('listeOps').innerHTML = html || "<p>Aucune opération.</p>";
+
+      // Génération du HTML de l'historique
+      let html = "";
+      for (const [mois, listeOps] of Object.entries(groupesParMois)) {
+        html += `<div class="month-group">
+          <div class="month-title">${mois}</div>
+          <div class="ops-list">`;
+
+        listeOps.forEach(op => {
+          const d = new Date(op.date);
+          // Formatage date courte (ex: jeu. 15)
+          const dateCourte = d.toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric' });
+          const classeType = op.type === 'debit' ? 'debit' : 'credit';
+          const signe = op.type === 'debit' ? '-' : '+';
+
+          html += `
+            <div class="operation-item" style="${op.isPrevision ? 'opacity: 0.6;' : ''}">
+              <div class="op-info">
+                <span class="op-desc">${op.description}</span>
+                ${op.isPrevision ? '<span class="tag-prev">Prévision</span>' : ''}
+              </div>
+              <div class="op-amount-block">
+                <div class="op-amount ${classeType}">${signe} ${Math.abs(op.montant).toFixed(2)} €</div>
+                <div class="op-date">${dateCourte}</div>
+              </div>
+            </div>`;
+        });
+
+        html += `</div></div>`;
+      }
+
+      document.getElementById('historiqueContainer').innerHTML = html || "<p style='text-align:center; color:#94a3b8;'>Aucune opération enregistrée.</p>";
     }
 
     async function ajouterOperation(e) {
@@ -216,13 +417,12 @@
         date: document.getElementById('dateOp').value,
         description: document.getElementById('descOp').value,
         montant: parseFloat(document.getElementById('montantOp').value),
-        type: document.getElementById('typeOp').value,
+        type: currentType,
         isPrevision: document.getElementById('isPrevision').checked
       };
 
       rawData.operations.push(nouvelleOp);
 
-      // Préparation de l'envoi sur GitHub
       const { user, repo, token } = getConfig();
       const url = `https://api.github.com/repos/${user}/${repo}/contents/data.json`;
       const nouveauContenuJSON = JSON.stringify(rawData, null, 2);
@@ -231,10 +431,7 @@
       try {
         const res = await fetch(url, {
           method: 'PUT',
-          headers: {
-            Authorization: `token ${token}`,
-            'Content-Type': 'application/json'
-          },
+          headers: { Authorization: `token ${token}`, 'Content-Type': 'application/json' },
           body: JSON.stringify({
             message: `Ajout : ${nouvelleOp.description}`,
             content: contentBase64,
@@ -243,24 +440,22 @@
         });
 
         if (res.ok) {
-          // Reset du formulaire
           document.getElementById('descOp').value = '';
           document.getElementById('montantOp').value = '';
           document.getElementById('isPrevision').checked = false;
-          
-          await chargerDonnees(); // Recharge la vue
+          fermerModalOp();
+          await chargerDonnees();
         } else {
-          alert("Erreur lors de la sauvegarde sur GitHub.");
+          alert("Erreur lors de la sauvegarde.");
         }
       } catch (err) {
         alert("Erreur réseau.");
       } finally {
-        btn.innerText = "Ajouter";
+        btn.innerText = "Valider";
         btn.disabled = false;
       }
     }
 
-    // Lancement au chargement
     chargerDonnees();
   </script>
 </body>
