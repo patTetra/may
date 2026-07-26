@@ -24,15 +24,6 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
-    },
-    {
-      "id": "1785103635929",
-      "date": "2026-07-26",
-      "description": "argent de poche",
-      "montant": 75,
-      "categorie": "💼 Revenus",
-      "type": "credit",
-      "isPrevision": false
     }
   ]
 }
