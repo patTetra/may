@@ -15,6 +15,14 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1785102517043",
+      "date": "2026-07-26",
+      "description": "Pour Patrick ",
+      "montant": 20,
+      "type": "debit",
+      "isPrevision": true
     }
   ]
 }
