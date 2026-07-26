@@ -9,14 +9,6 @@
       "isPrevision": false
     },
     {
-      "id": "1785102611916",
-      "date": "2026-07-26",
-      "description": "Essai",
-      "montant": 8.58,
-      "type": "debit",
-      "isPrevision": true
-    },
-    {
       "id": "1785102312905",
       "date": "2026-07-25",
       "description": "Sac",
