@@ -40,11 +40,37 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     .header h1 { font-size: 1.4rem; font-weight: 700; margin: 0; }
     .header-actions { display: flex; gap: 4px; }
     .btn-icon { background: none; border: none; font-size: 1.2rem; cursor: pointer; padding: 6px; }
+
+    /* Sélecteur de Compte Vue Globale */
+    .account-selector {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 16px;
+      background: #e2e8f0;
+      padding: 4px;
+      border-radius: 12px;
+    }
+    .account-tab {
+      flex: 1;
+      text-align: center;
+      padding: 8px 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.2s;
+    }
+    .account-tab.active {
+      background: var(--surface);
+      color: var(--primary);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
 
     /* Dashboard */
     .dashboard-card {
@@ -107,6 +133,7 @@
     .op-cat-icon { font-size: 1.3rem; background: var(--bg); padding: 8px; border-radius: 10px; }
     .op-info { display: flex; flex-direction: column; gap: 2px; }
     .op-desc { font-weight: 600; font-size: 0.9rem; }
+    .op-badge-account { font-size: 0.65rem; color: var(--text-muted); background: var(--bg); padding: 1px 6px; border-radius: 4px; width: fit-content; }
     .btn-validate-prev {
       font-size: 0.65rem; background: #fef3c7; color: #d97706; border: 1px solid #fcd34d;
       padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-top: 2px; width: fit-content;
@@ -154,10 +181,11 @@
     
     .modal-actions { display: flex; gap: 8px; margin-top: 16px; }
     .btn-submit { flex: 2; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
+    .btn-secondary { padding: 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; font-weight: 600; cursor: pointer; }
     .btn-delete { flex: 1; padding: 12px; background: #fee2e2; color: var(--red); border: 1px solid #fca5a5; border-radius: 8px; font-weight: 700; cursor: pointer; display: none; }
     .btn-duplicate { padding: 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; display: none; }
 
-    /* Screen Lock PIN */
+    /* Screen Lock PIN & Face ID */
     #lockScreen {
       position: fixed; top: 0; left: 0; right: 0; bottom: 0;
       background: #0f172a; color: white; display: flex; flex-direction: column;
@@ -210,8 +238,15 @@
     </div>
   </div>
 
+  <!-- Sélecteur de vue par Compte -->
+  <div class="account-selector">
+    <div class="account-tab active" id="tab-all" onclick="selectAccountView('all')">Tous les comptes</div>
+    <div class="account-tab" id="tab-courant" onclick="selectAccountView('courant')">💳 Courant</div>
+    <div class="account-tab" id="tab-livret" onclick="selectAccountView('livret')">🐷 Livret</div>
+  </div>
+
   <div class="dashboard-card">
-    <div class="solde-label">Solde Actuel</div>
+    <div class="solde-label" id="soldeLabel">Solde Actuel (Global)</div>
     <div id="soldeActuel" class="solde-main">0,00 €</div>
     <div class="solde-prev-container">
       <span>Solde Prévisionnel</span>
@@ -267,6 +302,14 @@
         </div>
 
         <div class="form-group">
+          <label>Compte concerné</label>
+          <select id="compteOp" class="form-control">
+            <option value="courant">💳 Compte Courant</option>
+            <option value="livret">🐷 Livret D'Épargne</option>
+          </select>
+        </div>
+
+        <div class="form-group">
           <label>Montant (€)</label>
           <input type="number" step="0.01" inputmode="decimal" id="montantOp" class="form-control" placeholder="0.00" required>
         </div>
@@ -285,6 +328,7 @@
             <option value="🎉 Loisirs">🎉 Loisirs / Sorties</option>
             <option value="🛍️ Shopping">🛍️ Shopping</option>
             <option value="💼 Revenus">💼 Revenus / Salaire</option>
+            <option value="🏦 Épargne">🏦 Épargne / Virement</option>
             <option value="📦 Autre" selected>📦 Autre</option>
           </select>
         </div>
@@ -317,7 +361,7 @@
   <div id="configModal" class="modal-overlay">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Configuration & Sécurité</h2>
+        <h2>Configuration & Options</h2>
         <button class="btn-icon" onclick="fermerConfig()">✕</button>
       </div>
 
@@ -326,11 +370,18 @@
       <div class="form-group"><label>Personal Access Token</label><input type="password" id="ghToken" class="form-control"></div>
       
       <div class="form-group">
-        <label>Code PIN de verrouillage (4 chiffres, optionnel)</label>
-        <input type="password" id="appPin" maxlength="4" placeholder="laisser vide pour désactiver" class="form-control">
+        <label>Code PIN de verrouillage (4 chiffres)</label>
+        <input type="password" id="appPin" maxlength="4" placeholder="laisser vide pour désactiver" class="form-control" autocomplete="current-password">
       </div>
 
-      <button class="btn-submit" style="width:100%" onclick="sauvegarderConfig()">Enregistrer les paramètres</button>
+      <button class="btn-submit" style="width:100%; margin-bottom: 10px;" onclick="sauvegarderConfig()">Enregistrer les paramètres</button>
+      
+      <hr style="border:0; border-top: 1px solid var(--border); margin: 16px 0;">
+
+      <div class="form-group">
+        <label>Sauvegarde & Export</label>
+        <button class="btn-secondary" style="width:100%" onclick="exporterCSV()">📥 Exporter les données (CSV)</button>
+      </div>
     </div>
   </div>
 
@@ -338,6 +389,7 @@
     let rawData = { operations: [] };
     let currentType = "debit";
     let activeFilter = "all";
+    let activeAccountView = "all"; // "all", "courant", "livret"
     let chartInstance = null;
     let enteredPin = "";
 
@@ -378,6 +430,21 @@
       }
     }
 
+    function selectAccountView(view) {
+      activeAccountView = view;
+      document.querySelectorAll('.account-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(`tab-${view}`).classList.add('active');
+
+      const labels = {
+        'all': 'Solde Actuel (Global)',
+        'courant': 'Solde Compte Courant',
+        'livret': 'Solde Livret d\'Épargne'
+      };
+      document.getElementById('soldeLabel').innerText = labels[view];
+
+      afficherDonnees();
+    }
+
     function setType(type) {
       currentType = type;
       document.getElementById('btnTypeDebit').className = `type-btn debit ${type === 'debit' ? 'active' : ''}`;
@@ -403,6 +470,7 @@
       document.getElementById('descOp').value = "";
       document.getElementById('montantOp').value = "";
       document.getElementById('dateOp').valueAsDate = new Date();
+      document.getElementById('compteOp').value = activeAccountView === 'livret' ? 'livret' : 'courant';
       document.getElementById('isPrevision').checked = false;
       document.getElementById('catOp').value = "📦 Autre";
       document.getElementById('btnDelete').style.display = 'none';
@@ -422,6 +490,7 @@
       document.getElementById('descOp').value = op.description;
       document.getElementById('montantOp').value = op.montant;
       document.getElementById('dateOp').value = op.date;
+      document.getElementById('compteOp').value = op.compte || "courant";
       document.getElementById('catOp').value = op.categorie || "📦 Autre";
       document.getElementById('isPrevision').checked = !!op.isPrevision;
       document.getElementById('btnDelete').style.display = 'block';
@@ -496,7 +565,14 @@
       const now = new Date();
       const currentMonthYear = now.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
 
-      ops.forEach(op => {
+      // Filtrer par compte pour le Dashboard
+      const opsDuCompte = ops.filter(op => {
+        if (activeAccountView === 'all') return true;
+        const cOp = op.compte || 'courant';
+        return cOp === activeAccountView;
+      });
+
+      opsDuCompte.forEach(op => {
         const val = op.type === 'debit' ? -Math.abs(op.montant) : Math.abs(op.montant);
         soldePrev += val;
         if (!op.isPrevision) soldeActuel += val;
@@ -515,7 +591,8 @@
       document.getElementById('statDebit').innerText = `-${mDebit.toFixed(2)} €`;
 
       const searchQuery = document.getElementById('searchInput').value.toLowerCase();
-      ops = ops.filter(op => {
+      
+      let filteredOps = opsDuCompte.filter(op => {
         const matchSearch = op.description.toLowerCase().includes(searchQuery) || (op.categorie && op.categorie.toLowerCase().includes(searchQuery));
         if (!matchSearch) return false;
 
@@ -526,7 +603,7 @@
       });
 
       const groupesParMois = {};
-      ops.forEach(op => {
+      filteredOps.forEach(op => {
         const d = new Date(op.date);
         const moisAnnee = d.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
         if (!groupesParMois[moisAnnee]) groupesParMois[moisAnnee] = [];
@@ -542,6 +619,7 @@
           const classeType = op.type === 'debit' ? 'debit' : 'credit';
           const signe = op.type === 'debit' ? '-' : '+';
           const icon = (op.categorie || "📦").split(' ')[0];
+          const badgeCompte = activeAccountView === 'all' ? (op.compte === 'livret' ? '🐷 Livret' : '💳 Courant') : '';
 
           html += `
             <div class="operation-item" onclick="ouvrirModalEdition('${op.id}')" style="${op.isPrevision ? 'opacity: 0.65;' : ''}">
@@ -549,6 +627,7 @@
                 <span class="op-cat-icon">${icon}</span>
                 <div class="op-info">
                   <span class="op-desc">${op.description}</span>
+                  ${badgeCompte ? `<span class="op-badge-account">${badgeCompte}</span>` : ''}
                   ${op.isPrevision ? `<button type="button" class="btn-validate-prev" onclick="event.stopPropagation(); validerPrevision('${op.id}')">⏳ Valider</button>` : ''}
                 </div>
               </div>
@@ -563,11 +642,11 @@
 
       document.getElementById('historiqueContainer').innerHTML = html || "<p style='text-align:center; color:#94a3b8; font-size:0.9rem;'>Aucune opération.</p>";
       
-      updateChart();
+      updateChart(opsDuCompte);
     }
 
-    function updateChart() {
-      const opsReelles = (rawData.operations || [])
+    function updateChart(opsSource) {
+      const opsReelles = opsSource
         .filter(o => !o.isPrevision)
         .sort((a, b) => new Date(a.date) - new Date(b.date));
 
@@ -604,6 +683,25 @@
       });
     }
 
+    function exporterCSV() {
+      let ops = rawData.operations || [];
+      if (ops.length === 0) return alert("Aucune donnée à exporter.");
+
+      let csv = "ID;Date;Type;Compte;Categorie;Description;Montant;Prevision\n";
+      ops.forEach(o => {
+        csv += `"${o.id}";"${o.date}";"${o.type}";"${o.compte || 'courant'}";"${o.categorie || ''}";"${o.description}";${o.montant};"${o.isPrevision ? 'Oui' : 'Non'}"\n`;
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `comptes_backup_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
     async function pushToGitHub(commitMessage) {
       const { user, repo, token } = getConfig();
       const url = `https://api.github.com/repos/${user}/${repo}/contents/data.json`;
@@ -624,7 +722,6 @@
       if (putRes.ok) {
         fermerModalOp();
         fermerConfig();
-        // Mise à jour directe de l'affichage local + rechargement différé GitHub
         afficherDonnees();
         setTimeout(chargerDonnees, 1500);
       } else {
@@ -641,6 +738,7 @@
       const opData = {
         id: editId || Date.now().toString(),
         date: document.getElementById('dateOp').value,
+        compte: document.getElementById('compteOp').value,
         description: document.getElementById('descOp').value,
         montant: parseFloat(document.getElementById('montantOp').value),
         categorie: document.getElementById('catOp').value,
