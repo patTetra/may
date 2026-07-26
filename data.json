@@ -4,9 +4,17 @@
       "id": "1",
       "date": "2026-07-26",
       "description": "Solde initial",
-      "montant": 1000.00,
+      "montant": 1000,
       "type": "credit",
       "statut": "realise"
+    },
+    {
+      "id": "1785098807382",
+      "date": "2026-07-26",
+      "description": "Essai",
+      "montant": 50,
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
