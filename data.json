@@ -1,35 +1,11 @@
 {
   "operations": [
     {
-      "id": "1",
+      "id": "1785102277032",
       "date": "2026-07-26",
       "description": "Solde initial",
-      "montant": 1000,
+      "montant": 476.1,
       "type": "credit",
-      "statut": "realise"
-    },
-    {
-      "id": "1785098807382",
-      "date": "2026-07-26",
-      "description": "Essai",
-      "montant": 50,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1785101689011",
-      "date": "2026-07-26",
-      "description": "De la part du génial Patrick ",
-      "montant": 10,
-      "type": "credit",
-      "isPrevision": false
-    },
-    {
-      "id": "1785101735834",
-      "date": "2026-07-26",
-      "description": "Mon super sac",
-      "montant": 131.65,
-      "type": "debit",
       "isPrevision": false
     }
   ]
