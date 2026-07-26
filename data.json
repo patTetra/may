@@ -9,6 +9,15 @@
       "isPrevision": false
     },
     {
+      "id": "1785103541211",
+      "date": "2026-07-26",
+      "description": "argent de poche",
+      "montant": 75,
+      "categorie": "💼 Revenus",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1785102312905",
       "date": "2026-07-25",
       "description": "Sac",
@@ -17,7 +26,7 @@
       "isPrevision": false
     },
     {
-      "id": "1785103541211",
+      "id": "1785103635929",
       "date": "2026-07-26",
       "description": "argent de poche",
       "montant": 75,
