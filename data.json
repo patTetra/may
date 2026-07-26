@@ -30,7 +30,7 @@
       "description": "Mon super sac",
       "montant": 131.65,
       "type": "debit",
-      "isPrevision": true
+      "isPrevision": false
     }
   ]
 }
