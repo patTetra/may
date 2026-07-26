@@ -15,6 +15,14 @@
       "montant": 50,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1785101689011",
+      "date": "2026-07-26",
+      "description": "De la part du génial Patrick ",
+      "montant": 10,
+      "type": "credit",
+      "isPrevision": false
     }
   ]
 }
