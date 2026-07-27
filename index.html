@@ -260,7 +260,7 @@
     <div class="account-tab" id="tab-all" onclick="selectAccountView('all')">🌐 Tous</div>
   </div>
 
-  <!-- NOUVEAU DASHBOARD SEPARE -->
+  <!-- DASHBOARD SEPARE -->
   <div class="dashboard-container">
     <div id="blocSoldeActuel" class="solde-block bg-green">
       <div class="solde-label" id="soldeLabel">Solde Compte Courant</div>
@@ -387,7 +387,6 @@
       <div class="form-group"><label>Nom du Dépôt</label><input type="text" id="ghRepo" class="form-control"></div>
       <div class="form-group"><label>Personal Access Token</label><input type="password" id="ghToken" class="form-control"></div>
       
-      <!-- NOUVEAU : Champ pour le seuil orange -->
       <div class="form-group">
         <label>Seuil d'alerte (Passage en Orange pour le Solde Actuel)</label>
         <input type="number" id="seuilOrange" class="form-control" placeholder="ex: 50 (Le solde sera vert au-dessus)">
@@ -402,9 +401,22 @@
       
       <hr style="border:0; border-top: 1px solid var(--border); margin: 16px 0;">
 
+      <!-- EXPORTS ET IMPORTS -->
       <div class="form-group">
-        <label>Sauvegarde & Export</label>
-        <button class="btn-secondary" style="width:100%" onclick="exporterCSV()">📥 Exporter les données (CSV)</button>
+        <label>Sauvegarde & Restauration Complète (JSON)</label>
+        <p style="font-size:0.75rem; color:var(--text-muted); margin: 2px 0 8px 0;">
+          Exporte ou restaure TOUT (opérations, clés GitHub, PIN, seuil).
+        </p>
+        <div style="display:flex; gap:8px;">
+          <button class="btn-secondary" style="flex:1" onclick="exporterBackupComplet()">📤 Exporter Backup</button>
+          <button class="btn-secondary" style="flex:1" onclick="document.getElementById('importFile').click()">📥 Importer Backup</button>
+        </div>
+        <input type="file" id="importFile" accept=".json" style="display:none" onchange="importerBackupComplet(event)">
+      </div>
+
+      <div class="form-group" style="margin-top: 12px;">
+        <label>Export Tableur</label>
+        <button class="btn-secondary" style="width:100%" onclick="exporterCSV()">📄 Exporter opérations (CSV)</button>
       </div>
     </div>
   </div>
@@ -560,7 +572,7 @@
       localStorage.setItem('seuil_orange', document.getElementById('seuilOrange').value.trim());
       localStorage.setItem('app_pin', document.getElementById('appPin').value.trim());
       fermerConfig();
-      afficherDonnees(); // Recharge la vue pour appliquer le nouveau seuil couleur si besoin
+      afficherDonnees();
     }
 
     async function chargerDonnees() {
@@ -622,11 +634,9 @@
       const blocActuel = document.getElementById('blocSoldeActuel');
       const blocPrev = document.getElementById('blocSoldePrev');
 
-      // Réinitialisation des classes
       blocActuel.classList.remove('bg-green', 'bg-orange', 'bg-red');
       blocPrev.classList.remove('bg-green', 'bg-red');
 
-      // Couleur Solde Actuel
       if (soldeActuel < 0) {
         blocActuel.classList.add('bg-red');
       } else if (soldeActuel < seuilOrange) {
@@ -635,7 +645,6 @@
         blocActuel.classList.add('bg-green');
       }
 
-      // Couleur Solde Prévisionnel
       if (soldePrev < 0) {
         blocPrev.classList.add('bg-red');
       } else {
@@ -735,6 +744,65 @@
       });
     }
 
+    // NOUVELLE FONCTION : EXPORTER UN BACKUP COMPLET (DATA + REGLAGES)
+    function exporterBackupComplet() {
+      const backupData = {
+        config: {
+          gh_user: localStorage.getItem('gh_user') || '',
+          gh_repo: localStorage.getItem('gh_repo') || '',
+          gh_token: localStorage.getItem('gh_token') || '',
+          seuil_orange: localStorage.getItem('seuil_orange') || '',
+          app_pin: localStorage.getItem('app_pin') || ''
+        },
+        data: rawData
+      };
+
+      const jsonStr = JSON.stringify(backupData, null, 2);
+      const blob = new Blob([jsonStr], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `comptes_backup_FULL_${new Date().toISOString().slice(0,10)}.json`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // NOUVELLE FONCTION : IMPORTER ET RESTAURER LE BACKUP COMPLET
+    function importerBackupComplet(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = async function(e) {
+        try {
+          const imported = JSON.parse(e.target.result);
+          if (!imported.config || !imported.data) {
+            return alert("Format de fichier d'import invalide.");
+          }
+
+          if (confirm("Attention, cette action va remplacer toutes tes données actuelles et tes paramètres par ceux du fichier. Continuer ?")) {
+            // Restauration de la config locale
+            localStorage.setItem('gh_user', imported.config.gh_user || '');
+            localStorage.setItem('gh_repo', imported.config.gh_repo || '');
+            localStorage.setItem('gh_token', imported.config.gh_token || '');
+            localStorage.setItem('seuil_orange', imported.config.seuil_orange || '');
+            localStorage.setItem('app_pin', imported.config.app_pin || '');
+
+            // Restauration des données d'opérations
+            rawData = imported.data;
+
+            // Envoi immédiat des nouvelles données réimportées vers GitHub
+            await pushToGitHub("Restauration globale depuis fichier JSON");
+            alert("Restauration effectuée avec succès !");
+          }
+        } catch (err) {
+          alert("Erreur lors de la lecture du fichier : " + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
     function exporterCSV() {
       let ops = rawData.operations || [];
       if (ops.length === 0) return alert("Aucune donnée à exporter.");
@@ -748,7 +816,7 @@
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.setAttribute("href", url);
-      link.setAttribute("download", `comptes_backup_${new Date().toISOString().slice(0,10)}.csv`);
+      link.setAttribute("download", `comptes_export_${new Date().toISOString().slice(0,10)}.csv`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
