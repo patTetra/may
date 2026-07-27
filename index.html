@@ -20,6 +20,7 @@
       --border: #e2e8f0;
       --primary: #2563eb;
       --green: #16a34a;
+      --orange: #f59e0b;
       --red: #dc2626;
       --radius: 16px;
     }
@@ -72,25 +73,39 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
-    /* Dashboard */
-    .dashboard-card {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      color: white;
+    /* Dashboard & Fonds dynamiques */
+    .dashboard-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .solde-block {
       padding: 20px;
       border-radius: var(--radius);
       box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      color: white;
+      text-align: center;
+      transition: background-color 0.3s ease;
     }
-    .solde-label { font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; }
-    .solde-main { font-size: 2.1rem; font-weight: 800; margin: 4px 0 12px 0; }
-    .solde-prev-container {
-      border-top: 1px solid #334155;
-      padding-top: 10px;
+    .solde-prev-block {
+      padding: 14px 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 10px -2px rgba(0,0,0,0.05);
+      color: white;
       display: flex;
       justify-content: space-between;
-      font-size: 0.85rem;
-      color: #cbd5e1;
+      align-items: center;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
     }
+    .solde-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.9; }
+    .solde-main { font-size: 2.1rem; font-weight: 800; margin: 4px 0 0 0; }
+    
+    /* Classes de couleurs pour les blocs */
+    .bg-green { background: linear-gradient(135deg, var(--green), #15803d); }
+    .bg-orange { background: linear-gradient(135deg, var(--orange), #d97706); }
+    .bg-red { background: linear-gradient(135deg, var(--red), #b91c1c); }
 
     /* Stats */
     .stats-card {
@@ -245,12 +260,15 @@
     <div class="account-tab" id="tab-all" onclick="selectAccountView('all')">🌐 Tous</div>
   </div>
 
-  <div class="dashboard-card">
-    <div class="solde-label" id="soldeLabel">Solde Compte Courant</div>
-    <div id="soldeActuel" class="solde-main">0,00 €</div>
-    <div class="solde-prev-container">
+  <!-- NOUVEAU DASHBOARD SEPARE -->
+  <div class="dashboard-container">
+    <div id="blocSoldeActuel" class="solde-block bg-green">
+      <div class="solde-label" id="soldeLabel">Solde Compte Courant</div>
+      <div id="soldeActuel" class="solde-main">0,00 €</div>
+    </div>
+    <div id="blocSoldePrev" class="solde-prev-block bg-green">
       <span>Solde Prévisionnel</span>
-      <strong id="soldePrevisionnel">0,00 €</strong>
+      <strong id="soldePrevisionnel" style="font-size: 1.1rem;">0,00 €</strong>
     </div>
   </div>
 
@@ -369,6 +387,12 @@
       <div class="form-group"><label>Nom du Dépôt</label><input type="text" id="ghRepo" class="form-control"></div>
       <div class="form-group"><label>Personal Access Token</label><input type="password" id="ghToken" class="form-control"></div>
       
+      <!-- NOUVEAU : Champ pour le seuil orange -->
+      <div class="form-group">
+        <label>Seuil d'alerte (Passage en Orange pour le Solde Actuel)</label>
+        <input type="number" id="seuilOrange" class="form-control" placeholder="ex: 50 (Le solde sera vert au-dessus)">
+      </div>
+
       <div class="form-group">
         <label>Code PIN de verrouillage (4 chiffres)</label>
         <input type="password" id="appPin" maxlength="4" placeholder="laisser vide pour désactiver" class="form-control" autocomplete="current-password">
@@ -510,10 +534,11 @@
 
     function fermerModalOp() { document.getElementById('opModal').classList.remove('open'); }
     function ouvrirConfig() {
-      const { user, repo, token } = getConfig();
+      const { user, repo, token, seuilOrange } = getConfig();
       document.getElementById('ghUser').value = user || '';
       document.getElementById('ghRepo').value = repo || '';
       document.getElementById('ghToken').value = token || '';
+      document.getElementById('seuilOrange').value = seuilOrange || '';
       document.getElementById('appPin').value = localStorage.getItem('app_pin') || '';
       document.getElementById('configModal').classList.add('open');
     }
@@ -523,7 +548,8 @@
       return {
         user: localStorage.getItem('gh_user'),
         repo: localStorage.getItem('gh_repo'),
-        token: localStorage.getItem('gh_token')
+        token: localStorage.getItem('gh_token'),
+        seuilOrange: localStorage.getItem('seuil_orange')
       };
     }
 
@@ -531,9 +557,10 @@
       localStorage.setItem('gh_user', document.getElementById('ghUser').value.trim());
       localStorage.setItem('gh_repo', document.getElementById('ghRepo').value.trim());
       localStorage.setItem('gh_token', document.getElementById('ghToken').value.trim());
+      localStorage.setItem('seuil_orange', document.getElementById('seuilOrange').value.trim());
       localStorage.setItem('app_pin', document.getElementById('appPin').value.trim());
       fermerConfig();
-      chargerDonnees();
+      afficherDonnees(); // Recharge la vue pour appliquer le nouveau seuil couleur si besoin
     }
 
     async function chargerDonnees() {
@@ -589,6 +616,31 @@
       document.getElementById('soldePrevisionnel').innerText = `${soldePrev.toFixed(2)} €`;
       document.getElementById('statCredit').innerText = `+${mCredit.toFixed(2)} €`;
       document.getElementById('statDebit').innerText = `-${mDebit.toFixed(2)} €`;
+
+      // GESTION DES COULEURS DES FONDS DE SOLDE
+      const seuilOrange = parseFloat(localStorage.getItem('seuil_orange')) || 0;
+      const blocActuel = document.getElementById('blocSoldeActuel');
+      const blocPrev = document.getElementById('blocSoldePrev');
+
+      // Réinitialisation des classes
+      blocActuel.classList.remove('bg-green', 'bg-orange', 'bg-red');
+      blocPrev.classList.remove('bg-green', 'bg-red');
+
+      // Couleur Solde Actuel
+      if (soldeActuel < 0) {
+        blocActuel.classList.add('bg-red');
+      } else if (soldeActuel < seuilOrange) {
+        blocActuel.classList.add('bg-orange');
+      } else {
+        blocActuel.classList.add('bg-green');
+      }
+
+      // Couleur Solde Prévisionnel
+      if (soldePrev < 0) {
+        blocPrev.classList.add('bg-red');
+      } else {
+        blocPrev.classList.add('bg-green');
+      }
 
       const searchQuery = document.getElementById('searchInput').value.toLowerCase();
       
