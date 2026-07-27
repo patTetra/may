@@ -185,7 +185,7 @@
     .btn-delete { flex: 1; padding: 12px; background: #fee2e2; color: var(--red); border: 1px solid #fca5a5; border-radius: 8px; font-weight: 700; cursor: pointer; display: none; }
     .btn-duplicate { padding: 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; display: none; }
 
-    /* Screen Lock PIN & Face ID */
+    /* Screen Lock PIN */
     #lockScreen {
       position: fixed; top: 0; left: 0; right: 0; bottom: 0;
       background: #0f172a; color: white; display: flex; flex-direction: column;
@@ -240,13 +240,13 @@
 
   <!-- Sélecteur de vue par Compte -->
   <div class="account-selector">
-    <div class="account-tab active" id="tab-all" onclick="selectAccountView('all')">Tous les comptes</div>
-    <div class="account-tab" id="tab-courant" onclick="selectAccountView('courant')">💳 Courant</div>
+    <div class="account-tab active" id="tab-courant" onclick="selectAccountView('courant')">💳 Courant</div>
     <div class="account-tab" id="tab-livret" onclick="selectAccountView('livret')">🐷 Livret</div>
+    <div class="account-tab" id="tab-all" onclick="selectAccountView('all')">🌐 Tous</div>
   </div>
 
   <div class="dashboard-card">
-    <div class="solde-label" id="soldeLabel">Solde Actuel (Global)</div>
+    <div class="solde-label" id="soldeLabel">Solde Compte Courant</div>
     <div id="soldeActuel" class="solde-main">0,00 €</div>
     <div class="solde-prev-container">
       <span>Solde Prévisionnel</span>
@@ -389,7 +389,7 @@
     let rawData = { operations: [] };
     let currentType = "debit";
     let activeFilter = "all";
-    let activeAccountView = "all"; // "all", "courant", "livret"
+    let activeAccountView = "courant"; // "courant" par défaut
     let chartInstance = null;
     let enteredPin = "";
 
@@ -436,7 +436,7 @@
       document.getElementById(`tab-${view}`).classList.add('active');
 
       const labels = {
-        'all': 'Solde Actuel (Global)',
+        'all': 'Solde Global (Tous les comptes)',
         'courant': 'Solde Compte Courant',
         'livret': 'Solde Livret d\'Épargne'
       };
@@ -565,7 +565,7 @@
       const now = new Date();
       const currentMonthYear = now.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
 
-      // Filtrer par compte pour le Dashboard
+      // Filtrer par compte sélectionné
       const opsDuCompte = ops.filter(op => {
         if (activeAccountView === 'all') return true;
         const cOp = op.compte || 'courant';
