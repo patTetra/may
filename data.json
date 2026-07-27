@@ -15,6 +15,16 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1785164322671",
+      "date": "2026-07-27",
+      "compte": "courant",
+      "description": "retrait ",
+      "montant": 50,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
