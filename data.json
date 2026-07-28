@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1785164322671",
+      "date": "2026-07-27",
+      "compte": "courant",
+      "description": "retrait ",
+      "montant": 50,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1785102277032",
       "date": "2026-07-26",
       "description": "Solde initial",
@@ -17,11 +27,11 @@
       "isPrevision": false
     },
     {
-      "id": "1785164322671",
-      "date": "2026-07-27",
+      "id": "1785279734986",
+      "date": "2026-07-28",
       "compte": "courant",
-      "description": "retrait ",
-      "montant": 50,
+      "description": "Jeu ",
+      "montant": 1.99,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
