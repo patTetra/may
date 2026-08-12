@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1786530919033",
+      "date": "2026-08-12",
+      "compte": "courant",
+      "description": "Coca ",
+      "montant": 2.5,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1786530805536",
       "date": "2026-08-04",
       "compte": "courant",
@@ -107,12 +117,12 @@
       "isPrevision": false
     },
     {
-      "id": "1786530919033",
+      "id": "1786530993668",
       "date": "2026-08-12",
       "compte": "courant",
-      "description": "Coca ",
-      "montant": 2.5,
-      "categorie": "🛒 Alimentation",
+      "description": "Souvenir Oceanopolis",
+      "montant": 8.9,
+      "categorie": "🛍️ Shopping",
       "type": "debit",
       "isPrevision": false
     }
