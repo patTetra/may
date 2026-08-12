@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1786530833801",
+      "date": "2026-08-04",
+      "compte": "courant",
+      "description": "fournitures scolaires ",
+      "montant": 35,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1785511985884",
       "date": "2026-07-31",
       "compte": "courant",
@@ -83,16 +93,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1786530833801",
-      "date": "2026-08-04",
-      "compte": "courant",
-      "description": "fournitures scolaires ",
-      "montant": 35,
-      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
