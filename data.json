@@ -21,6 +21,16 @@
       "isPrevision": false
     },
     {
+      "id": "1786530993668",
+      "date": "2026-08-12",
+      "compte": "courant",
+      "description": "Souvenir Oceanopolis",
+      "montant": 8.9,
+      "categorie": "🛍️ Shopping",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1786530805536",
       "date": "2026-08-04",
       "compte": "courant",
@@ -117,12 +127,12 @@
       "isPrevision": false
     },
     {
-      "id": "1786530993668",
+      "id": "1786541027907",
       "date": "2026-08-12",
       "compte": "courant",
-      "description": "Souvenir Oceanopolis",
-      "montant": 8.9,
-      "categorie": "🛍️ Shopping",
+      "description": "Quick",
+      "montant": 9.85,
+      "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
     }
