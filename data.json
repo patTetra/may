@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1786530899578",
+      "date": "2026-08-12",
+      "compte": "courant",
+      "description": "Sandwiches Marie Blachere ",
+      "montant": 8.45,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1786530805536",
       "date": "2026-08-04",
       "compte": "courant",
@@ -97,11 +107,11 @@
       "isPrevision": false
     },
     {
-      "id": "1786530899578",
+      "id": "1786530919033",
       "date": "2026-08-12",
       "compte": "courant",
-      "description": "Sandwiches Marie Blachere ",
-      "montant": 8.45,
+      "description": "Coca ",
+      "montant": 2.5,
       "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
