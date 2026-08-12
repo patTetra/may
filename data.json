@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1786530805536",
+      "date": "2026-08-04",
+      "compte": "courant",
+      "description": "Fournitures scolaires ",
+      "montant": 63.4,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1785511985884",
       "date": "2026-07-31",
       "compte": "courant",
@@ -77,13 +87,13 @@
       "isPrevision": false
     },
     {
-      "id": "1786530805536",
+      "id": "1786530833801",
       "date": "2026-08-04",
       "compte": "courant",
-      "description": "Fournitures scolaires ",
-      "montant": 63.4,
+      "description": "fournitures scolaires ",
+      "montant": 35,
       "categorie": "📦 Autre",
-      "type": "credit",
+      "type": "debit",
       "isPrevision": false
     }
   ]
