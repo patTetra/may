@@ -31,6 +31,16 @@
       "isPrevision": false
     },
     {
+      "id": "1785512311549",
+      "date": "2026-07-31",
+      "compte": "courant",
+      "description": "Conduite accompagnée macaron ",
+      "montant": 2.9,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1785279734986",
       "date": "2026-07-28",
       "compte": "courant",
@@ -67,13 +77,13 @@
       "isPrevision": false
     },
     {
-      "id": "1785512311549",
-      "date": "2026-07-31",
+      "id": "1786530805536",
+      "date": "2026-08-04",
       "compte": "courant",
-      "description": "Conduite accompagnée macaron ",
-      "montant": 2.9,
+      "description": "Fournitures scolaires ",
+      "montant": 63.4,
       "categorie": "📦 Autre",
-      "type": "debit",
+      "type": "credit",
       "isPrevision": false
     }
   ]
