@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1786648690326",
+      "date": "2026-08-13",
+      "compte": "courant",
+      "description": "Goûter ",
+      "montant": 5,
+      "categorie": "🎉 Loisirs",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1786530899578",
       "date": "2026-08-12",
       "compte": "courant",
@@ -137,12 +147,12 @@
       "isPrevision": false
     },
     {
-      "id": "1786648690326",
+      "id": "1786648708251",
       "date": "2026-08-13",
       "compte": "courant",
-      "description": "Goûter ",
-      "montant": 5,
-      "categorie": "🎉 Loisirs",
+      "description": "Spotify ",
+      "montant": 12.14,
+      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
