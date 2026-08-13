@@ -31,6 +31,16 @@
       "isPrevision": false
     },
     {
+      "id": "1786541027907",
+      "date": "2026-08-12",
+      "compte": "courant",
+      "description": "Quick",
+      "montant": 9.85,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1786530805536",
       "date": "2026-08-04",
       "compte": "courant",
@@ -127,12 +137,12 @@
       "isPrevision": false
     },
     {
-      "id": "1786541027907",
-      "date": "2026-08-12",
+      "id": "1786648690326",
+      "date": "2026-08-13",
       "compte": "courant",
-      "description": "Quick",
-      "montant": 9.85,
-      "categorie": "🛒 Alimentation",
+      "description": "Goûter ",
+      "montant": 5,
+      "categorie": "🎉 Loisirs",
       "type": "debit",
       "isPrevision": false
     }
