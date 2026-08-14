@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1786648708251",
+      "date": "2026-08-13",
+      "compte": "courant",
+      "description": "Spotify ",
+      "montant": 12.14,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1786530899578",
       "date": "2026-08-12",
       "compte": "courant",
@@ -147,11 +157,11 @@
       "isPrevision": false
     },
     {
-      "id": "1786648708251",
-      "date": "2026-08-13",
+      "id": "1786738067206",
+      "date": "2026-08-14",
       "compte": "courant",
-      "description": "Spotify ",
-      "montant": 12.14,
+      "description": "Zoo ",
+      "montant": 10.99,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
