@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1786738067206",
+      "date": "2026-08-14",
+      "compte": "courant",
+      "description": "Zoo ",
+      "montant": 10.99,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1786648690326",
       "date": "2026-08-13",
       "compte": "courant",
@@ -157,13 +167,13 @@
       "isPrevision": false
     },
     {
-      "id": "1786738067206",
-      "date": "2026-08-14",
+      "id": "1786791070939",
+      "date": "2026-08-15",
       "compte": "courant",
-      "description": "Zoo ",
-      "montant": 10.99,
+      "description": "fête ",
+      "montant": 30,
       "categorie": "📦 Autre",
-      "type": "debit",
+      "type": "credit",
       "isPrevision": false
     }
   ]
