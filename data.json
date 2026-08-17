@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1786791070939",
+      "date": "2026-08-15",
+      "compte": "courant",
+      "description": "fête ",
+      "montant": 30,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1786738067206",
       "date": "2026-08-14",
       "compte": "courant",
@@ -167,13 +177,13 @@
       "isPrevision": false
     },
     {
-      "id": "1786791070939",
-      "date": "2026-08-15",
+      "id": "1786996645937",
+      "date": "2026-08-17",
       "compte": "courant",
-      "description": "fête ",
-      "montant": 30,
+      "description": "Médicament ",
+      "montant": 13,
       "categorie": "📦 Autre",
-      "type": "credit",
+      "type": "debit",
       "isPrevision": false
     }
   ]
