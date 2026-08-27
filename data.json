@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1786996645937",
+      "date": "2026-08-17",
+      "compte": "courant",
+      "description": "Médicament ",
+      "montant": 13,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1786791070939",
       "date": "2026-08-15",
       "compte": "courant",
@@ -177,11 +187,11 @@
       "isPrevision": false
     },
     {
-      "id": "1786996645937",
-      "date": "2026-08-17",
+      "id": "1787862349972",
+      "date": "2026-08-26",
       "compte": "courant",
-      "description": "Médicament ",
-      "montant": 13,
+      "description": "Dague Cosplay",
+      "montant": 68.19,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
