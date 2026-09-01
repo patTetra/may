@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1788282026977",
+      "date": "2026-08-29",
+      "compte": "courant",
+      "description": "Recrée des 3 curés",
+      "montant": 19.5,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1787862349972",
       "date": "2026-08-26",
       "compte": "courant",
@@ -193,16 +203,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1788282026977",
-      "date": "2026-09-01",
-      "compte": "courant",
-      "description": "Recrée des 3 curés",
-      "montant": 19.5,
-      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
