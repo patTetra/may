@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1787862349972",
+      "date": "2026-08-26",
+      "compte": "courant",
+      "description": "Dague Cosplay",
+      "montant": 68.19,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1786996645937",
       "date": "2026-08-17",
       "compte": "courant",
@@ -187,11 +197,11 @@
       "isPrevision": false
     },
     {
-      "id": "1787862349972",
-      "date": "2026-08-26",
+      "id": "1788282026977",
+      "date": "2026-09-01",
       "compte": "courant",
-      "description": "Dague Cosplay",
-      "montant": 68.19,
+      "description": "Recrée des 3 curés",
+      "montant": 19.5,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
