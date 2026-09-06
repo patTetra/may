@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1788698490434",
+      "date": "2026-09-06",
+      "compte": "courant",
+      "description": "salaire ",
+      "montant": 100,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1788611772995",
       "date": "2026-09-05",
       "compte": "courant",
@@ -237,11 +247,11 @@
       "isPrevision": false
     },
     {
-      "id": "1788698490434",
+      "id": "1788698521961",
       "date": "2026-09-06",
       "compte": "courant",
-      "description": "salaire ",
-      "montant": 100,
+      "description": "argent de poche ",
+      "montant": 35,
       "categorie": "📦 Autre",
       "type": "credit",
       "isPrevision": false
