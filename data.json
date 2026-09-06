@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1788611772995",
+      "date": "2026-09-05",
+      "compte": "courant",
+      "description": "Costume ",
+      "montant": 20.71,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1788282026977",
       "date": "2026-08-29",
       "compte": "courant",
@@ -207,12 +217,12 @@
       "isPrevision": false
     },
     {
-      "id": "1788611772995",
+      "id": "1788698420921",
       "date": "2026-09-05",
       "compte": "courant",
-      "description": "Costume ",
-      "montant": 20.71,
-      "categorie": "📦 Autre",
+      "description": "bouteille d’eau ",
+      "montant": 1.5,
+      "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
     }
