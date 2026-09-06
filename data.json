@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1788698420921",
+      "date": "2026-09-05",
+      "compte": "courant",
+      "description": "bouteille d’eau ",
+      "montant": 1.5,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1788282026977",
       "date": "2026-08-29",
       "compte": "courant",
@@ -217,12 +227,12 @@
       "isPrevision": false
     },
     {
-      "id": "1788698420921",
-      "date": "2026-09-05",
+      "id": "1788698468765",
+      "date": "2026-09-06",
       "compte": "courant",
-      "description": "bouteille d’eau ",
-      "montant": 1.5,
-      "categorie": "🛒 Alimentation",
+      "description": "mcdonald’s ",
+      "montant": 17.3,
+      "categorie": "🎉 Loisirs",
       "type": "debit",
       "isPrevision": false
     }
