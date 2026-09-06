@@ -41,6 +41,16 @@
       "isPrevision": false
     },
     {
+      "id": "1788699053010",
+      "date": "2026-09-06",
+      "compte": "livret",
+      "description": "autre ",
+      "montant": 15.45,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1788611772995",
       "date": "2026-09-05",
       "compte": "courant",
@@ -263,16 +273,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1788699053010",
-      "date": "2026-09-06",
-      "compte": "livret",
-      "description": "autre ",
-      "montant": 15.45,
-      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
