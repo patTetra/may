@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1788698468765",
+      "date": "2026-09-06",
+      "compte": "courant",
+      "description": "mcdonald’s ",
+      "montant": 17.3,
+      "categorie": "🎉 Loisirs",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1788611772995",
       "date": "2026-09-05",
       "compte": "courant",
@@ -227,13 +237,13 @@
       "isPrevision": false
     },
     {
-      "id": "1788698468765",
+      "id": "1788698490434",
       "date": "2026-09-06",
       "compte": "courant",
-      "description": "mcdonald’s ",
-      "montant": 17.3,
-      "categorie": "🎉 Loisirs",
-      "type": "debit",
+      "description": "salaire ",
+      "montant": 100,
+      "categorie": "📦 Autre",
+      "type": "credit",
       "isPrevision": false
     }
   ]
