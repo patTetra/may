@@ -275,6 +275,16 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1788956555855",
+      "date": "2026-09-09",
+      "compte": "courant",
+      "description": "Course ",
+      "montant": 13.1,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
