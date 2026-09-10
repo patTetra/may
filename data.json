@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1788956555855",
+      "date": "2026-09-09",
+      "compte": "courant",
+      "description": "Course ",
+      "montant": 13.1,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1788698468765",
       "date": "2026-09-06",
       "compte": "courant",
@@ -277,11 +287,11 @@
       "isPrevision": false
     },
     {
-      "id": "1788956555855",
+      "id": "1789071014722",
       "date": "2026-09-09",
       "compte": "courant",
-      "description": "Course ",
-      "montant": 13.1,
+      "description": "ongles",
+      "montant": 76,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
