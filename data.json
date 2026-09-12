@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1789208880182",
+      "date": "2026-09-12",
+      "compte": "courant",
+      "description": "Salaire ",
+      "montant": 100,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1788956555855",
       "date": "2026-09-09",
       "compte": "courant",
@@ -307,13 +317,13 @@
       "isPrevision": false
     },
     {
-      "id": "1789208880182",
+      "id": "1789208914782",
       "date": "2026-09-12",
-      "compte": "courant",
-      "description": "Salaire ",
+      "compte": "livret",
+      "description": "carte bancaire",
       "montant": 100,
       "categorie": "📦 Autre",
-      "type": "credit",
+      "type": "debit",
       "isPrevision": false
     }
   ]
