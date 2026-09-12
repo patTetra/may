@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1789071014722",
+      "date": "2026-09-09",
+      "compte": "courant",
+      "description": "ongles",
+      "montant": 76,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1788698468765",
       "date": "2026-09-06",
       "compte": "courant",
@@ -287,11 +297,11 @@
       "isPrevision": false
     },
     {
-      "id": "1789071014722",
-      "date": "2026-09-09",
+      "id": "1789208728180",
+      "date": "2026-09-12",
       "compte": "courant",
-      "description": "ongles",
-      "montant": 76,
+      "description": "Jeu PS5 ",
+      "montant": 79.99,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
