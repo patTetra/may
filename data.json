@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1789208728180",
+      "date": "2026-09-12",
+      "compte": "courant",
+      "description": "Jeu PS5 ",
+      "montant": 79.99,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1788956555855",
       "date": "2026-09-09",
       "compte": "courant",
@@ -297,13 +307,13 @@
       "isPrevision": false
     },
     {
-      "id": "1789208728180",
+      "id": "1789208880182",
       "date": "2026-09-12",
       "compte": "courant",
-      "description": "Jeu PS5 ",
-      "montant": 79.99,
+      "description": "Salaire ",
+      "montant": 100,
       "categorie": "📦 Autre",
-      "type": "debit",
+      "type": "credit",
       "isPrevision": false
     }
   ]
