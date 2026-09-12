@@ -21,6 +21,16 @@
       "isPrevision": false
     },
     {
+      "id": "1789208914782",
+      "date": "2026-09-12",
+      "compte": "livret",
+      "description": "carte bancaire",
+      "montant": 100,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1788956555855",
       "date": "2026-09-09",
       "compte": "courant",
@@ -317,11 +327,11 @@
       "isPrevision": false
     },
     {
-      "id": "1789208914782",
+      "id": "1789209238408",
       "date": "2026-09-12",
-      "compte": "livret",
-      "description": "carte bancaire",
-      "montant": 100,
+      "compte": "courant",
+      "description": "BK",
+      "montant": 16.5,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
