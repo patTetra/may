@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1789314459082",
+      "date": "2026-09-13",
+      "compte": "courant",
+      "description": "BK",
+      "montant": 2.7,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1789314362439",
       "date": "2026-09-12",
       "compte": "courant",
@@ -357,11 +367,11 @@
       "isPrevision": false
     },
     {
-      "id": "1789314459082",
-      "date": "2026-09-13",
+      "id": "1789314491063",
+      "date": "2026-09-12",
       "compte": "courant",
-      "description": "BK",
-      "montant": 2.7,
+      "description": "Nourriture Camille (rembourser)",
+      "montant": 12.43,
       "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
