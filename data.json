@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1789314362439",
+      "date": "2026-09-12",
+      "compte": "courant",
+      "description": "Nocibe ",
+      "montant": 32,
+      "categorie": "🛍️ Shopping",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1789208728180",
       "date": "2026-09-12",
       "compte": "courant",
@@ -343,16 +353,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1789314362439",
-      "date": "2026-09-13",
-      "compte": "courant",
-      "description": "BK",
-      "montant": 16.5,
-      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
