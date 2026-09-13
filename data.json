@@ -31,6 +31,16 @@
       "isPrevision": false
     },
     {
+      "id": "1789209238408",
+      "date": "2026-09-12",
+      "compte": "courant",
+      "description": "BK",
+      "montant": 16.5,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1788956555855",
       "date": "2026-09-09",
       "compte": "courant",
@@ -327,11 +337,11 @@
       "isPrevision": false
     },
     {
-      "id": "1789209238408",
-      "date": "2026-09-12",
+      "id": "1789314285169",
+      "date": "2026-09-13",
       "compte": "courant",
-      "description": "BK",
-      "montant": 16.5,
+      "description": "Spotify",
+      "montant": 12.14,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
