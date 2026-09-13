@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1789314285169",
+      "date": "2026-09-13",
+      "compte": "courant",
+      "description": "Spotify",
+      "montant": 12.14,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1789208728180",
       "date": "2026-09-12",
       "compte": "courant",
@@ -337,11 +347,11 @@
       "isPrevision": false
     },
     {
-      "id": "1789314285169",
+      "id": "1789314362439",
       "date": "2026-09-13",
       "compte": "courant",
-      "description": "Spotify",
-      "montant": 12.14,
+      "description": "BK",
+      "montant": 16.5,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
