@@ -355,6 +355,16 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1789314459082",
+      "date": "2026-09-13",
+      "compte": "courant",
+      "description": "BK",
+      "montant": 2.7,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
