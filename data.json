@@ -71,6 +71,16 @@
       "isPrevision": false
     },
     {
+      "id": "1789314491063",
+      "date": "2026-09-12",
+      "compte": "courant",
+      "description": "Nourriture Camille (rembourser)",
+      "montant": 12.43,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1788956555855",
       "date": "2026-09-09",
       "compte": "courant",
@@ -367,11 +377,11 @@
       "isPrevision": false
     },
     {
-      "id": "1789314491063",
+      "id": "1789314511830",
       "date": "2026-09-12",
       "compte": "courant",
-      "description": "Nourriture Camille (rembourser)",
-      "montant": 12.43,
+      "description": "Nourriture May Vegan",
+      "montant": 5.94,
       "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
