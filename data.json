@@ -91,6 +91,16 @@
       "isPrevision": false
     },
     {
+      "id": "1789314547866",
+      "date": "2026-09-12",
+      "compte": "courant",
+      "description": "H&M",
+      "montant": 31.99,
+      "categorie": "🛍️ Shopping",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1788956555855",
       "date": "2026-09-09",
       "compte": "courant",
@@ -387,12 +397,12 @@
       "isPrevision": false
     },
     {
-      "id": "1789314547866",
-      "date": "2026-09-12",
+      "id": "1789943502826",
+      "date": "2026-09-18",
       "compte": "courant",
-      "description": "H&M",
-      "montant": 31.99,
-      "categorie": "🛍️ Shopping",
+      "description": "Essence ",
+      "montant": 22.41,
+      "categorie": "🚗 Transport",
       "type": "debit",
       "isPrevision": false
     }
