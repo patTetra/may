@@ -38,7 +38,7 @@
       "montant": 229.24,
       "categorie": "🏦 Épargne",
       "type": "debit",
-      "isPrevision": true
+      "isPrevision": false
     },
     {
       "id": "1789314285169",
