@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1789943502826",
+      "date": "2026-09-18",
+      "compte": "courant",
+      "description": "Essence ",
+      "montant": 22.41,
+      "categorie": "🚗 Transport",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1789314285169",
       "date": "2026-09-13",
       "compte": "courant",
@@ -397,12 +407,12 @@
       "isPrevision": false
     },
     {
-      "id": "1789943502826",
-      "date": "2026-09-18",
+      "id": "1790010797110",
+      "date": "2026-09-21",
       "compte": "courant",
-      "description": "Essence ",
-      "montant": 22.41,
-      "categorie": "🚗 Transport",
+      "description": "Course",
+      "montant": 15.09,
+      "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
     }
