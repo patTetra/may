@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1790010797110",
+      "date": "2026-09-21",
+      "compte": "courant",
+      "description": "Course",
+      "montant": 15.09,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1789943502826",
       "date": "2026-09-18",
       "compte": "courant",
@@ -407,12 +417,12 @@
       "isPrevision": false
     },
     {
-      "id": "1790010797110",
+      "id": "1790010812863",
       "date": "2026-09-21",
       "compte": "courant",
-      "description": "Course",
-      "montant": 15.09,
-      "categorie": "🛒 Alimentation",
+      "description": "Liquide maman ",
+      "montant": 7.8,
+      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
