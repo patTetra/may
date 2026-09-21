@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1790010812863",
+      "date": "2026-09-21",
+      "compte": "courant",
+      "description": "Liquide maman ",
+      "montant": 7.8,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1789943502826",
       "date": "2026-09-18",
       "compte": "courant",
@@ -417,13 +427,13 @@
       "isPrevision": false
     },
     {
-      "id": "1790010812863",
-      "date": "2026-09-21",
-      "compte": "courant",
-      "description": "Liquide maman ",
-      "montant": 7.8,
-      "categorie": "📦 Autre",
-      "type": "debit",
+      "id": "1790010888050",
+      "date": "2026-09-14",
+      "compte": "livret",
+      "description": "Tablette Lycée ",
+      "montant": 229.24,
+      "categorie": "🏦 Épargne",
+      "type": "credit",
       "isPrevision": false
     }
   ]
