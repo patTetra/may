@@ -31,6 +31,16 @@
       "isPrevision": false
     },
     {
+      "id": "1790010888050",
+      "date": "2026-09-14",
+      "compte": "livret",
+      "description": "Tablette Lycée ",
+      "montant": 229.24,
+      "categorie": "🏦 Épargne",
+      "type": "debit",
+      "isPrevision": true
+    },
+    {
       "id": "1789314285169",
       "date": "2026-09-13",
       "compte": "courant",
@@ -424,16 +434,6 @@
       "description": "Sac",
       "montant": 131.65,
       "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1790010888050",
-      "date": "2026-09-14",
-      "compte": "livret",
-      "description": "Tablette Lycée ",
-      "montant": 229.24,
-      "categorie": "🏦 Épargne",
-      "type": "credit",
       "isPrevision": false
     }
   ]
