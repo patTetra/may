@@ -435,6 +435,16 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1790089741520",
+      "date": "2026-09-22",
+      "compte": "courant",
+      "description": "BK goûter ",
+      "montant": 8.35,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
