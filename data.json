@@ -61,6 +61,16 @@
       "isPrevision": false
     },
     {
+      "id": "1790699002820",
+      "date": "2026-09-21",
+      "compte": "courant",
+      "description": "maman ",
+      "montant": 7.4,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1789943502826",
       "date": "2026-09-18",
       "compte": "courant",
@@ -477,13 +487,13 @@
       "isPrevision": false
     },
     {
-      "id": "1790699002820",
-      "date": "2026-09-21",
+      "id": "1790699063696",
+      "date": "2026-09-29",
       "compte": "courant",
-      "description": "maman ",
-      "montant": 7.4,
+      "description": "carrefour ",
+      "montant": 7.48,
       "categorie": "📦 Autre",
-      "type": "credit",
+      "type": "debit",
       "isPrevision": false
     }
   ]
