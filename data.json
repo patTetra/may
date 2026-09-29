@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1790698937054",
+      "date": "2026-09-29",
+      "compte": "livret",
+      "description": "iphone ",
+      "montant": 540,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1790698890041",
       "date": "2026-09-26",
       "compte": "courant",
@@ -467,13 +477,13 @@
       "isPrevision": false
     },
     {
-      "id": "1790698937054",
-      "date": "2026-09-29",
-      "compte": "livret",
-      "description": "iphone ",
-      "montant": 540,
+      "id": "1790699002820",
+      "date": "2026-09-21",
+      "compte": "courant",
+      "description": "maman ",
+      "montant": 7.4,
       "categorie": "📦 Autre",
-      "type": "debit",
+      "type": "credit",
       "isPrevision": false
     }
   ]
