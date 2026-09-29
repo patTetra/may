@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1790089741520",
+      "date": "2026-09-22",
+      "compte": "courant",
+      "description": "BK goûter ",
+      "montant": 8.35,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1790010797110",
       "date": "2026-09-21",
       "compte": "courant",
@@ -437,13 +447,13 @@
       "isPrevision": false
     },
     {
-      "id": "1790089741520",
-      "date": "2026-09-22",
+      "id": "1790698890041",
+      "date": "2026-09-26",
       "compte": "courant",
-      "description": "BK goûter ",
-      "montant": 8.35,
+      "description": "iphone",
+      "montant": 540,
       "categorie": "📦 Autre",
-      "type": "debit",
+      "type": "credit",
       "isPrevision": false
     }
   ]
