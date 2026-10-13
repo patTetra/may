@@ -21,6 +21,16 @@
       "isPrevision": false
     },
     {
+      "id": "1791919450987",
+      "date": "2026-10-01",
+      "compte": "courant",
+      "description": "Repas maman ",
+      "montant": 19,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1790698937054",
       "date": "2026-09-29",
       "compte": "livret",
@@ -527,13 +537,13 @@
       "isPrevision": false
     },
     {
-      "id": "1791919450987",
-      "date": "2026-10-01",
+      "id": "1791919474105",
+      "date": "2026-10-02",
       "compte": "courant",
-      "description": "Repas maman ",
-      "montant": 19,
-      "categorie": "🛒 Alimentation",
-      "type": "debit",
+      "description": "Argent de poche ",
+      "montant": 35,
+      "categorie": "💼 Revenus",
+      "type": "credit",
       "isPrevision": false
     }
   ]
