@@ -61,6 +61,16 @@
       "isPrevision": false
     },
     {
+      "id": "1791919896994",
+      "date": "2026-10-12",
+      "compte": "courant",
+      "description": "Course",
+      "montant": 10.02,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1791919619506",
       "date": "2026-10-11",
       "compte": "courant",
@@ -657,12 +667,12 @@
       "isPrevision": false
     },
     {
-      "id": "1791919896994",
-      "date": "2026-10-12",
+      "id": "1791919930875",
+      "date": "2026-10-13",
       "compte": "courant",
-      "description": "Course",
-      "montant": 10.02,
-      "categorie": "🛒 Alimentation",
+      "description": "Spotify",
+      "montant": 12.14,
+      "categorie": "🛍️ Shopping",
       "type": "debit",
       "isPrevision": false
     }
