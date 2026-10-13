@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1790699063696",
+      "date": "2026-09-25",
+      "compte": "courant",
+      "description": "carrefour ",
+      "montant": 7.48,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1790698890041",
       "date": "2026-09-26",
       "compte": "courant",
@@ -483,16 +493,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1790699063696",
-      "date": "2026-09-29",
-      "compte": "courant",
-      "description": "carrefour ",
-      "montant": 7.48,
-      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
