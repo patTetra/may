@@ -1,13 +1,23 @@
 {
   "operations": [
     {
+      "id": "1791919930875",
+      "date": "2026-10-13",
+      "compte": "courant",
+      "description": "Spotify",
+      "montant": 12.14,
+      "categorie": "🛍️ Shopping",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1791919676077",
       "date": "2026-10-12",
       "compte": "courant",
       "description": "Salaire ",
       "montant": 300,
       "categorie": "💼 Revenus",
-      "type": "debit",
+      "type": "credit",
       "isPrevision": false
     },
     {
@@ -663,16 +673,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1791919930875",
-      "date": "2026-10-13",
-      "compte": "courant",
-      "description": "Spotify",
-      "montant": 12.14,
-      "categorie": "🛍️ Shopping",
       "type": "debit",
       "isPrevision": false
     }
