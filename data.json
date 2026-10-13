@@ -11,16 +11,6 @@
       "isPrevision": false
     },
     {
-      "id": "1791919619506",
-      "date": "2026-10-11",
-      "compte": "courant",
-      "description": "Essence ",
-      "montant": 30.01,
-      "categorie": "📦 Autre",
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
       "id": "1791919635936",
       "date": "2026-10-12",
       "compte": "courant",
@@ -28,6 +18,16 @@
       "montant": 30.01,
       "categorie": "📦 Autre",
       "type": "credit",
+      "isPrevision": false
+    },
+    {
+      "id": "1791919619506",
+      "date": "2026-10-11",
+      "compte": "courant",
+      "description": "Essence ",
+      "montant": 30.01,
+      "categorie": "📦 Autre",
+      "type": "debit",
       "isPrevision": false
     },
     {
@@ -613,6 +613,16 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
+      "id": "1791919702461",
+      "date": "2026-10-12",
+      "compte": "courant",
+      "description": "coca ",
+      "montant": 1.5,
+      "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
     }
