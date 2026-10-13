@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1791920029062",
+      "date": "2026-10-13",
+      "compte": "courant",
+      "description": "Salaire",
+      "montant": 83.57,
+      "categorie": "💼 Revenus",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1791919676077",
       "date": "2026-10-12",
       "compte": "courant",
@@ -673,16 +683,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1791920029062",
-      "date": "2026-10-13",
-      "compte": "courant",
-      "description": "Salaire",
-      "montant": 83.57,
-      "categorie": "💼 Revenus",
       "type": "debit",
       "isPrevision": false
     }
