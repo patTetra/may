@@ -635,6 +635,16 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1791919795881",
+      "date": "2026-10-12",
+      "compte": "courant",
+      "description": "photo permis ",
+      "montant": 10,
+      "categorie": "🚗 Transport",
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
