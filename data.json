@@ -21,6 +21,16 @@
       "isPrevision": false
     },
     {
+      "id": "1791919702461",
+      "date": "2026-10-12",
+      "compte": "courant",
+      "description": "coca ",
+      "montant": 1.5,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1791919619506",
       "date": "2026-10-11",
       "compte": "courant",
@@ -617,11 +627,11 @@
       "isPrevision": false
     },
     {
-      "id": "1791919702461",
+      "id": "1791919718583",
       "date": "2026-10-12",
       "compte": "courant",
-      "description": "coca ",
-      "montant": 1.5,
+      "description": "course",
+      "montant": 10,
       "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
