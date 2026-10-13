@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1791919597469",
+      "date": "2026-10-10",
+      "compte": "courant",
+      "description": "Course",
+      "montant": 4.06,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1791919578546",
       "date": "2026-10-07",
       "compte": "courant",
@@ -577,12 +587,12 @@
       "isPrevision": false
     },
     {
-      "id": "1791919597469",
-      "date": "2026-10-10",
+      "id": "1791919619506",
+      "date": "2026-10-11",
       "compte": "courant",
-      "description": "Course",
-      "montant": 4.06,
-      "categorie": "🛒 Alimentation",
+      "description": "Essence ",
+      "montant": 30.01,
+      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
