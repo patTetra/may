@@ -11,16 +11,6 @@
       "isPrevision": false
     },
     {
-      "id": "1790698890041",
-      "date": "2026-09-26",
-      "compte": "courant",
-      "description": "iphone",
-      "montant": 540,
-      "categorie": "📦 Autre",
-      "type": "credit",
-      "isPrevision": false
-    },
-    {
       "id": "1790698918683",
       "date": "2026-09-28",
       "compte": "courant",
@@ -28,6 +18,16 @@
       "montant": 516.9,
       "categorie": "📦 Autre",
       "type": "debit",
+      "isPrevision": false
+    },
+    {
+      "id": "1790698890041",
+      "date": "2026-09-26",
+      "compte": "courant",
+      "description": "iphone",
+      "montant": 540,
+      "categorie": "📦 Autre",
+      "type": "credit",
       "isPrevision": false
     },
     {
@@ -493,6 +493,16 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
+      "id": "1791919361650",
+      "date": "2026-09-29",
+      "compte": "courant",
+      "description": "Je sais plus ",
+      "montant": 2.7,
+      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
