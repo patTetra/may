@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1791919635936",
+      "date": "2026-10-11",
+      "compte": "courant",
+      "description": "Essence maman ",
+      "montant": 30.01,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1791919597469",
       "date": "2026-10-10",
       "compte": "courant",
@@ -597,13 +607,13 @@
       "isPrevision": false
     },
     {
-      "id": "1791919635936",
-      "date": "2026-10-11",
+      "id": "1791919676077",
+      "date": "2026-10-12",
       "compte": "courant",
-      "description": "Essence maman ",
-      "montant": 30.01,
-      "categorie": "📦 Autre",
-      "type": "credit",
+      "description": "Salaire ",
+      "montant": 300,
+      "categorie": "💼 Revenus",
+      "type": "debit",
       "isPrevision": false
     }
   ]
