@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1791919474105",
+      "date": "2026-10-02",
+      "compte": "courant",
+      "description": "Argent de poche ",
+      "montant": 35,
+      "categorie": "💼 Revenus",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1791919384332",
       "date": "2026-10-01",
       "compte": "courant",
@@ -537,13 +547,13 @@
       "isPrevision": false
     },
     {
-      "id": "1791919474105",
-      "date": "2026-10-02",
+      "id": "1791919494398",
+      "date": "2026-10-03",
       "compte": "courant",
-      "description": "Argent de poche ",
-      "montant": 35,
-      "categorie": "💼 Revenus",
-      "type": "credit",
+      "description": "Patrick ",
+      "montant": 18.1,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
       "isPrevision": false
     }
   ]
