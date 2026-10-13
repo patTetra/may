@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1791919384332",
+      "date": "2026-10-01",
+      "compte": "courant",
+      "description": "Repas sassou",
+      "montant": 15,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1790698937054",
       "date": "2026-09-29",
       "compte": "livret",
@@ -503,16 +513,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1791919384332",
-      "date": "2026-10-01",
-      "compte": "courant",
-      "description": "Repas sassou",
-      "montant": 15,
-      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
