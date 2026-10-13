@@ -46,7 +46,7 @@
       "compte": "courant",
       "description": "Essence ",
       "montant": 30.01,
-      "categorie": "📦 Autre",
+      "categorie": "🚗 Transport",
       "type": "debit",
       "isPrevision": false
     },
