@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1791919676077",
+      "date": "2026-10-12",
+      "compte": "courant",
+      "description": "Salaire ",
+      "montant": 300,
+      "categorie": "💼 Revenus",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1791919619506",
       "date": "2026-10-11",
       "compte": "courant",
@@ -12,7 +22,7 @@
     },
     {
       "id": "1791919635936",
-      "date": "2026-10-11",
+      "date": "2026-10-12",
       "compte": "courant",
       "description": "Essence maman ",
       "montant": 30.01,
@@ -603,16 +613,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1791919676077",
-      "date": "2026-10-12",
-      "compte": "courant",
-      "description": "Salaire ",
-      "montant": 300,
-      "categorie": "💼 Revenus",
       "type": "debit",
       "isPrevision": false
     }
