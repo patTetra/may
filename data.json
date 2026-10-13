@@ -31,6 +31,16 @@
       "isPrevision": false
     },
     {
+      "id": "1791919718583",
+      "date": "2026-10-12",
+      "compte": "courant",
+      "description": "photo permis ",
+      "montant": 10,
+      "categorie": "🚗 Transport",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1791919619506",
       "date": "2026-10-11",
       "compte": "courant",
@@ -623,16 +633,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1791919718583",
-      "date": "2026-10-12",
-      "compte": "courant",
-      "description": "course",
-      "montant": 10,
-      "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
     }
