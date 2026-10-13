@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1791919361650",
+      "date": "2026-09-29",
+      "compte": "courant",
+      "description": "Je sais plus ",
+      "montant": 2.7,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1790698918683",
       "date": "2026-09-28",
       "compte": "courant",
@@ -497,11 +507,11 @@
       "isPrevision": false
     },
     {
-      "id": "1791919361650",
-      "date": "2026-09-29",
+      "id": "1791919384332",
+      "date": "2026-10-01",
       "compte": "courant",
-      "description": "Je sais plus ",
-      "montant": 2.7,
+      "description": "Repas sassou",
+      "montant": 15,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
