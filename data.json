@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1791919619506",
+      "date": "2026-10-11",
+      "compte": "courant",
+      "description": "Essence ",
+      "montant": 30.01,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1791919597469",
       "date": "2026-10-10",
       "compte": "courant",
@@ -587,13 +597,13 @@
       "isPrevision": false
     },
     {
-      "id": "1791919619506",
+      "id": "1791919635936",
       "date": "2026-10-11",
       "compte": "courant",
-      "description": "Essence ",
+      "description": "Essence maman ",
       "montant": 30.01,
       "categorie": "📦 Autre",
-      "type": "debit",
+      "type": "credit",
       "isPrevision": false
     }
   ]
