@@ -715,6 +715,16 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1792162110613",
+      "date": "2026-10-16",
+      "compte": "courant",
+      "description": "Oasis ",
+      "montant": 1.5,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
