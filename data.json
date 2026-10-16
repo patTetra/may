@@ -36,7 +36,7 @@
       "compte": "courant",
       "description": "Coca zéro ",
       "montant": 1.5,
-      "categorie": "📦 Autre",
+      "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
     },
