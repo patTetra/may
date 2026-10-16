@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1792162110613",
+      "date": "2026-10-16",
+      "compte": "courant",
+      "description": "Oasis ",
+      "montant": 1.5,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1792162083476",
       "date": "2026-10-15",
       "compte": "courant",
@@ -717,12 +727,12 @@
       "isPrevision": false
     },
     {
-      "id": "1792162110613",
-      "date": "2026-10-16",
+      "id": "1792162140822",
+      "date": "2026-10-15",
       "compte": "courant",
-      "description": "Oasis ",
+      "description": "Coca zéro ",
       "montant": 1.5,
-      "categorie": "🛒 Alimentation",
+      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
