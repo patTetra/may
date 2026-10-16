@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1792162083476",
+      "date": "2026-10-15",
+      "compte": "courant",
+      "description": "Mousses au chocolat ",
+      "montant": 2.21,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1792162023541",
       "date": "2026-10-15",
       "compte": "courant",
@@ -703,16 +713,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1792162083476",
-      "date": "2026-10-16",
-      "compte": "courant",
-      "description": "Mousses au chocolat ",
-      "montant": 2.21,
-      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
