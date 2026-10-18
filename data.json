@@ -21,6 +21,16 @@
       "isPrevision": false
     },
     {
+      "id": "1792334114580",
+      "date": "2026-10-17",
+      "compte": "courant",
+      "description": "Fanta Sassou",
+      "montant": 6.6,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1792162110613",
       "date": "2026-10-16",
       "compte": "courant",
@@ -757,12 +767,12 @@
       "isPrevision": false
     },
     {
-      "id": "1792334114580",
+      "id": "1792334141292",
       "date": "2026-10-17",
       "compte": "courant",
-      "description": "Fanta Sassou",
-      "montant": 6.6,
-      "categorie": "🛒 Alimentation",
+      "description": "Essence ",
+      "montant": 30.02,
+      "categorie": "🚗 Transport",
       "type": "debit",
       "isPrevision": false
     }
