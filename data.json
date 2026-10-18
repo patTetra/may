@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1792334059967",
+      "date": "2026-10-17",
+      "compte": "courant",
+      "description": "Course May",
+      "montant": 8.26,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1792162110613",
       "date": "2026-10-16",
       "compte": "courant",
@@ -737,12 +747,12 @@
       "isPrevision": false
     },
     {
-      "id": "1792334059967",
+      "id": "1792334082477",
       "date": "2026-10-17",
       "compte": "courant",
-      "description": "Course May",
-      "montant": 8.26,
-      "categorie": "📦 Autre",
+      "description": "Bouteille d’eau ",
+      "montant": 0.2,
+      "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
     }
