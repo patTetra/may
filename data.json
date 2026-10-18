@@ -735,6 +735,16 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1792334059967",
+      "date": "2026-10-17",
+      "compte": "courant",
+      "description": "Course May",
+      "montant": 8.26,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
