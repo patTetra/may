@@ -755,6 +755,16 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1792334114580",
+      "date": "2026-10-17",
+      "compte": "courant",
+      "description": "Fanta Sassou",
+      "montant": 6.6,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
