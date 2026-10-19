@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1792399509677",
+      "date": "2026-10-18",
+      "compte": "courant",
+      "description": "Maman ",
+      "montant": 20,
+      "categorie": "💼 Revenus",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1792334059967",
       "date": "2026-10-17",
       "compte": "courant",
@@ -774,16 +784,6 @@
       "description": "Sac",
       "montant": 131.65,
       "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1792399509677",
-      "date": "2026-10-19",
-      "compte": "courant",
-      "description": "Maman ",
-      "montant": 20,
-      "categorie": "💼 Revenus",
-      "type": "credit",
       "isPrevision": false
     }
   ]
