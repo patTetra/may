@@ -785,6 +785,16 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1792405147126",
+      "date": "2026-10-19",
+      "compte": "courant",
+      "description": "BK",
+      "montant": 32.55,
+      "categorie": "🎉 Loisirs",
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
