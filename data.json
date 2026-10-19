@@ -31,6 +31,16 @@
       "isPrevision": false
     },
     {
+      "id": "1792334141292",
+      "date": "2026-10-17",
+      "compte": "courant",
+      "description": "Essence ",
+      "montant": 30.02,
+      "categorie": "🚗 Transport",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1792162110613",
       "date": "2026-10-16",
       "compte": "courant",
@@ -767,13 +777,13 @@
       "isPrevision": false
     },
     {
-      "id": "1792334141292",
-      "date": "2026-10-17",
+      "id": "1792399509677",
+      "date": "2026-10-19",
       "compte": "courant",
-      "description": "Essence ",
-      "montant": 30.02,
-      "categorie": "🚗 Transport",
-      "type": "debit",
+      "description": "Maman ",
+      "montant": 20,
+      "categorie": "💼 Revenus",
+      "type": "credit",
       "isPrevision": false
     }
   ]
