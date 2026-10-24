@@ -1,8 +1,18 @@
 {
   "operations": [
     {
+      "id": "1792843943393",
+      "date": "2026-10-24",
+      "compte": "courant",
+      "description": "Essence ",
+      "montant": 70.02,
+      "categorie": "🚗 Transport",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1792843919433",
-      "date": "2026-10-23",
+      "date": "2026-10-22",
       "compte": "courant",
       "description": "Courses Halloween",
       "montant": 12.48,
@@ -803,16 +813,6 @@
       "date": "2026-07-25",
       "description": "Sac",
       "montant": 131.65,
-      "type": "debit",
-      "isPrevision": false
-    },
-    {
-      "id": "1792843943393",
-      "date": "2026-10-24",
-      "compte": "courant",
-      "description": "Essence ",
-      "montant": 70.02,
-      "categorie": "🚗 Transport",
       "type": "debit",
       "isPrevision": false
     }
