@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1792843978807",
+      "date": "2026-10-23",
+      "compte": "courant",
+      "description": "Maman ",
+      "montant": 6,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1792843919433",
       "date": "2026-10-22",
       "compte": "courant",
@@ -817,13 +827,13 @@
       "isPrevision": false
     },
     {
-      "id": "1792843978807",
-      "date": "2026-10-23",
+      "id": "1792844083189",
+      "date": "2026-10-24",
       "compte": "courant",
-      "description": "Maman ",
-      "montant": 6,
+      "description": "?",
+      "montant": 1.79,
       "categorie": "📦 Autre",
-      "type": "credit",
+      "type": "debit",
       "isPrevision": false
     }
   ]
