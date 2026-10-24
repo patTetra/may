@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1792405147126",
+      "date": "2026-10-19",
+      "compte": "courant",
+      "description": "BK",
+      "montant": 32.55,
+      "categorie": "🎉 Loisirs",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1792399509677",
       "date": "2026-10-18",
       "compte": "courant",
@@ -787,12 +797,12 @@
       "isPrevision": false
     },
     {
-      "id": "1792405147126",
-      "date": "2026-10-19",
+      "id": "1792843919433",
+      "date": "2026-10-23",
       "compte": "courant",
-      "description": "BK",
-      "montant": 32.55,
-      "categorie": "🎉 Loisirs",
+      "description": "Courses Halloween",
+      "montant": 12.48,
+      "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
     }
