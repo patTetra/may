@@ -845,6 +845,16 @@
       "montant": 131.65,
       "type": "debit",
       "isPrevision": false
+    },
+    {
+      "id": "1793015226273",
+      "date": "2026-10-25",
+      "compte": "courant",
+      "description": "fete fo ",
+      "montant": 40,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
     }
   ]
 }
