@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1793022970790",
+      "date": "2026-10-26",
+      "compte": "courant",
+      "description": "IKEA ",
+      "montant": 67.84,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1793015226273",
       "date": "2026-10-25",
       "compte": "courant",
@@ -867,13 +877,13 @@
       "isPrevision": false
     },
     {
-      "id": "1793022970790",
+      "id": "1793023021931",
       "date": "2026-10-26",
       "compte": "courant",
-      "description": "IKEA ",
-      "montant": 67.84,
+      "description": "may ",
+      "montant": 100,
       "categorie": "📦 Autre",
-      "type": "debit",
+      "type": "credit",
       "isPrevision": false
     }
   ]
