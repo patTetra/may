@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1793015226273",
+      "date": "2026-10-25",
+      "compte": "courant",
+      "description": "fete fo ",
+      "montant": 40,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1792843943393",
       "date": "2026-10-24",
       "compte": "courant",
@@ -847,11 +857,11 @@
       "isPrevision": false
     },
     {
-      "id": "1793015226273",
+      "id": "1793015238586",
       "date": "2026-10-25",
       "compte": "courant",
-      "description": "fete fo ",
-      "montant": 40,
+      "description": "bk ",
+      "montant": 14,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
