@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1793015238586",
+      "date": "2026-10-25",
+      "compte": "courant",
+      "description": "bk ",
+      "montant": 14,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1792843943393",
       "date": "2026-10-24",
       "compte": "courant",
@@ -857,11 +867,11 @@
       "isPrevision": false
     },
     {
-      "id": "1793015238586",
-      "date": "2026-10-25",
+      "id": "1793022970790",
+      "date": "2026-10-26",
       "compte": "courant",
-      "description": "bk ",
-      "montant": 14,
+      "description": "IKEA ",
+      "montant": 67.84,
       "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
