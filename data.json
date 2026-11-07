@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794073362574",
+      "date": "2026-11-06",
+      "compte": "courant",
+      "description": "Médicament ",
+      "montant": 28.7,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1793022970790",
       "date": "2026-10-26",
       "compte": "courant",
@@ -897,12 +907,12 @@
       "isPrevision": false
     },
     {
-      "id": "1794073362574",
-      "date": "2026-11-06",
+      "id": "1794073383279",
+      "date": "2026-11-07",
       "compte": "courant",
-      "description": "Médicament ",
-      "montant": 28.7,
-      "categorie": "🛒 Alimentation",
+      "description": "Cadeau",
+      "montant": 8.5,
+      "categorie": "🛍️ Shopping",
       "type": "debit",
       "isPrevision": false
     }
