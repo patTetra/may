@@ -31,6 +31,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794073398454",
+      "date": "2026-11-06",
+      "compte": "courant",
+      "description": "Goûter ",
+      "montant": 3.96,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1793022970790",
       "date": "2026-10-26",
       "compte": "courant",
@@ -917,11 +927,11 @@
       "isPrevision": false
     },
     {
-      "id": "1794073398454",
+      "id": "1794073424222",
       "date": "2026-11-06",
       "compte": "courant",
-      "description": "Goûter ",
-      "montant": 3.96,
+      "description": "Course pour association ",
+      "montant": 22.52,
       "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
