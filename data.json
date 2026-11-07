@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1793023021931",
+      "date": "2026-10-26",
+      "compte": "courant",
+      "description": "may ",
+      "montant": 100,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1793015226273",
       "date": "2026-10-25",
       "compte": "courant",
@@ -877,13 +887,13 @@
       "isPrevision": false
     },
     {
-      "id": "1793023021931",
-      "date": "2026-10-26",
+      "id": "1794073326702",
+      "date": "2026-11-06",
       "compte": "courant",
-      "description": "may ",
-      "montant": 100,
-      "categorie": "📦 Autre",
-      "type": "credit",
+      "description": "Airbnb",
+      "montant": 165.28,
+      "categorie": "🎉 Loisirs",
+      "type": "debit",
       "isPrevision": false
     }
   ]
