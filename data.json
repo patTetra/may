@@ -51,6 +51,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794073469945",
+      "date": "2026-11-05",
+      "compte": "courant",
+      "description": "Salaire",
+      "montant": 650.91,
+      "categorie": "💼 Revenus",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1793022970790",
       "date": "2026-10-26",
       "compte": "courant",
@@ -937,13 +947,13 @@
       "isPrevision": false
     },
     {
-      "id": "1794073469945",
-      "date": "2026-11-05",
+      "id": "1794073503920",
+      "date": "2026-11-07",
       "compte": "courant",
-      "description": "Salaire",
-      "montant": 650.91,
-      "categorie": "💼 Revenus",
-      "type": "credit",
+      "description": "Essence ",
+      "montant": 51.92,
+      "categorie": "🚗 Transport",
+      "type": "debit",
       "isPrevision": false
     }
   ]
