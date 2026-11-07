@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1794073326702",
+      "date": "2026-11-06",
+      "compte": "courant",
+      "description": "Airbnb",
+      "montant": 165.28,
+      "categorie": "🎉 Loisirs",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1793022970790",
       "date": "2026-10-26",
       "compte": "courant",
@@ -887,12 +897,12 @@
       "isPrevision": false
     },
     {
-      "id": "1794073326702",
+      "id": "1794073362574",
       "date": "2026-11-06",
       "compte": "courant",
-      "description": "Airbnb",
-      "montant": 165.28,
-      "categorie": "🎉 Loisirs",
+      "description": "Médicament ",
+      "montant": 28.7,
+      "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
     }
