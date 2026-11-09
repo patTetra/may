@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1794229958889",
+      "date": "2026-11-08",
+      "compte": "courant",
+      "description": "Pimkie",
+      "montant": 25.98,
+      "categorie": "🛍️ Shopping",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1794073383279",
       "date": "2026-11-07",
       "compte": "courant",
@@ -957,11 +967,11 @@
       "isPrevision": false
     },
     {
-      "id": "1794229958889",
+      "id": "1794229982453",
       "date": "2026-11-08",
       "compte": "courant",
-      "description": "Pimkie",
-      "montant": 25.98,
+      "description": "Larnicol",
+      "montant": 21.8,
       "categorie": "🛍️ Shopping",
       "type": "debit",
       "isPrevision": false
