@@ -141,6 +141,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794230334267",
+      "date": "2026-10-27",
+      "compte": "courant",
+      "description": "Action ",
+      "montant": 12.74,
+      "categorie": "🛍️ Shopping",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1793022970790",
       "date": "2026-10-26",
       "compte": "courant",
@@ -1027,12 +1037,12 @@
       "isPrevision": false
     },
     {
-      "id": "1794230334267",
-      "date": "2026-10-27",
+      "id": "1794230387154",
+      "date": "2026-11-09",
       "compte": "courant",
-      "description": "Action ",
-      "montant": 12.74,
-      "categorie": "🛍️ Shopping",
+      "description": "?",
+      "montant": 0.4,
+      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
