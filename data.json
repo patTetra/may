@@ -21,6 +21,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794230005472",
+      "date": "2026-11-08",
+      "compte": "courant",
+      "description": "Goûter boulangerie ",
+      "montant": 41.35,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1794073383279",
       "date": "2026-11-07",
       "compte": "courant",
@@ -977,12 +987,12 @@
       "isPrevision": false
     },
     {
-      "id": "1794230005472",
+      "id": "1794230030670",
       "date": "2026-11-08",
       "compte": "courant",
-      "description": "Goûter boulangerie ",
-      "montant": 41.35,
-      "categorie": "🛒 Alimentation",
+      "description": "Place de parking ",
+      "montant": 14.2,
+      "categorie": "🛍️ Shopping",
       "type": "debit",
       "isPrevision": false
     }
