@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794073503920",
+      "date": "2026-11-07",
+      "compte": "courant",
+      "description": "Essence ",
+      "montant": 51.92,
+      "categorie": "🚗 Transport",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1794073326702",
       "date": "2026-11-06",
       "compte": "courant",
@@ -947,12 +957,12 @@
       "isPrevision": false
     },
     {
-      "id": "1794073503920",
-      "date": "2026-11-07",
+      "id": "1794229958889",
+      "date": "2026-11-08",
       "compte": "courant",
-      "description": "Essence ",
-      "montant": 51.92,
-      "categorie": "🚗 Transport",
+      "description": "Pimkie",
+      "montant": 25.98,
+      "categorie": "🛍️ Shopping",
       "type": "debit",
       "isPrevision": false
     }
