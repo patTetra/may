@@ -31,6 +31,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794230030670",
+      "date": "2026-11-08",
+      "compte": "courant",
+      "description": "Place de parking ",
+      "montant": 14.2,
+      "categorie": "🛍️ Shopping",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1794073383279",
       "date": "2026-11-07",
       "compte": "courant",
@@ -987,11 +997,11 @@
       "isPrevision": false
     },
     {
-      "id": "1794230030670",
+      "id": "1794230061234",
       "date": "2026-11-08",
       "compte": "courant",
-      "description": "Place de parking ",
-      "montant": 14.2,
+      "description": "Coque ",
+      "montant": 55.41,
       "categorie": "🛍️ Shopping",
       "type": "debit",
       "isPrevision": false
