@@ -121,6 +121,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794230206166",
+      "date": "2026-11-04",
+      "compte": "courant",
+      "description": "essence ",
+      "montant": 50.01,
+      "categorie": "🚗 Transport",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1793022970790",
       "date": "2026-10-26",
       "compte": "courant",
@@ -1007,12 +1017,12 @@
       "isPrevision": false
     },
     {
-      "id": "1794230206166",
+      "id": "1794230269944",
       "date": "2026-11-04",
       "compte": "courant",
-      "description": "essence ",
-      "montant": 50.01,
-      "categorie": "🚗 Transport",
+      "description": "Super u ",
+      "montant": 1.32,
+      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
