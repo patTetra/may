@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1794230387154",
+      "date": "2026-11-09",
+      "compte": "courant",
+      "description": "?",
+      "montant": 0.4,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1794229958889",
       "date": "2026-11-08",
       "compte": "courant",
@@ -1037,13 +1047,13 @@
       "isPrevision": false
     },
     {
-      "id": "1794230387154",
+      "id": "1794297181718",
       "date": "2026-11-09",
       "compte": "courant",
-      "description": "?",
-      "montant": 0.4,
-      "categorie": "📦 Autre",
-      "type": "debit",
+      "description": "Lou ",
+      "montant": 18,
+      "categorie": "💼 Revenus",
+      "type": "credit",
       "isPrevision": false
     }
   ]
