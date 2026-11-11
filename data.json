@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794414472809",
+      "date": "2026-11-10",
+      "compte": "courant",
+      "description": "Course ",
+      "montant": 2.34,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1794230387154",
       "date": "2026-11-09",
       "compte": "courant",
@@ -1067,13 +1077,13 @@
       "isPrevision": false
     },
     {
-      "id": "1794414472809",
-      "date": "2026-11-10",
-      "compte": "courant",
-      "description": "Course ",
-      "montant": 2.34,
-      "categorie": "🛒 Alimentation",
-      "type": "debit",
+      "id": "1794414522203",
+      "date": "2026-11-02",
+      "compte": "livret",
+      "description": "Salaire",
+      "montant": 775.91,
+      "categorie": "💼 Revenus",
+      "type": "credit",
       "isPrevision": false
     }
   ]
