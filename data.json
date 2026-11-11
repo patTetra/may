@@ -221,6 +221,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794414565113",
+      "date": "2026-10-26",
+      "compte": "livret",
+      "description": "Vers carte bancaire ",
+      "montant": 100,
+      "categorie": "💼 Revenus",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1793015226273",
       "date": "2026-10-25",
       "compte": "courant",
@@ -1087,13 +1097,13 @@
       "isPrevision": false
     },
     {
-      "id": "1794414565113",
-      "date": "2026-10-26",
-      "compte": "livret",
-      "description": "Vers carte bancaire ",
-      "montant": 100,
-      "categorie": "💼 Revenus",
-      "type": "debit",
+      "id": "1794414610531",
+      "date": "2026-11-11",
+      "compte": "courant",
+      "description": "Sécurité sociale remboursement ",
+      "montant": 9.45,
+      "categorie": "📦 Autre",
+      "type": "credit",
       "isPrevision": false
     }
   ]
