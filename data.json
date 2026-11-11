@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794297181718",
+      "date": "2026-11-09",
+      "compte": "courant",
+      "description": "Lou ",
+      "montant": 18,
+      "categorie": "💼 Revenus",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1794229958889",
       "date": "2026-11-08",
       "compte": "courant",
@@ -1047,13 +1057,13 @@
       "isPrevision": false
     },
     {
-      "id": "1794297181718",
-      "date": "2026-11-09",
+      "id": "1794414444783",
+      "date": "2026-11-10",
       "compte": "courant",
-      "description": "Lou ",
-      "montant": 18,
-      "categorie": "💼 Revenus",
-      "type": "credit",
+      "description": "Essence ",
+      "montant": 30.03,
+      "categorie": "🚗 Transport",
+      "type": "debit",
       "isPrevision": false
     }
   ]
