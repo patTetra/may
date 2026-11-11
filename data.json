@@ -181,6 +181,16 @@
       "isPrevision": false
     },
     {
+      "id": "1794414522203",
+      "date": "2026-11-02",
+      "compte": "livret",
+      "description": "Salaire",
+      "montant": 775.91,
+      "categorie": "💼 Revenus",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1794230334267",
       "date": "2026-10-27",
       "compte": "courant",
@@ -1077,13 +1087,13 @@
       "isPrevision": false
     },
     {
-      "id": "1794414522203",
-      "date": "2026-11-02",
+      "id": "1794414565113",
+      "date": "2026-10-26",
       "compte": "livret",
-      "description": "Salaire",
-      "montant": 775.91,
+      "description": "Vers carte bancaire ",
+      "montant": 100,
       "categorie": "💼 Revenus",
-      "type": "credit",
+      "type": "debit",
       "isPrevision": false
     }
   ]
