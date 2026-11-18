@@ -11,6 +11,16 @@
       "isPrevision": false
     },
     {
+      "id": "1795010793011",
+      "date": "2026-11-17",
+      "compte": "courant",
+      "description": "CEF",
+      "montant": 109,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1794414610531",
       "date": "2026-11-11",
       "compte": "courant",
@@ -1117,12 +1127,12 @@
       "isPrevision": false
     },
     {
-      "id": "1795010793011",
+      "id": "1795010813217",
       "date": "2026-11-17",
       "compte": "courant",
-      "description": "CEF",
-      "montant": 109,
-      "categorie": "📦 Autre",
+      "description": "course ",
+      "montant": 2.64,
+      "categorie": "🛒 Alimentation",
       "type": "debit",
       "isPrevision": false
     }
