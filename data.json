@@ -21,6 +21,16 @@
       "isPrevision": false
     },
     {
+      "id": "1795010813217",
+      "date": "2026-11-17",
+      "compte": "courant",
+      "description": "course ",
+      "montant": 2.64,
+      "categorie": "🛒 Alimentation",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1794414610531",
       "date": "2026-11-11",
       "compte": "courant",
@@ -1127,12 +1137,12 @@
       "isPrevision": false
     },
     {
-      "id": "1795010813217",
-      "date": "2026-11-17",
+      "id": "1795010839168",
+      "date": "2026-11-16",
       "compte": "courant",
-      "description": "course ",
-      "montant": 2.64,
-      "categorie": "🛒 Alimentation",
+      "description": "Piercings",
+      "montant": 90,
+      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
