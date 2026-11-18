@@ -31,6 +31,16 @@
       "isPrevision": false
     },
     {
+      "id": "1795010839168",
+      "date": "2026-11-16",
+      "compte": "courant",
+      "description": "Piercings",
+      "montant": 90,
+      "categorie": "📦 Autre",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1794414610531",
       "date": "2026-11-11",
       "compte": "courant",
@@ -1137,12 +1147,12 @@
       "isPrevision": false
     },
     {
-      "id": "1795010839168",
-      "date": "2026-11-16",
+      "id": "1795010874664",
+      "date": "2026-11-17",
       "compte": "courant",
-      "description": "Piercings",
-      "montant": 90,
-      "categorie": "📦 Autre",
+      "description": "Spotify",
+      "montant": 12.14,
+      "categorie": "🎉 Loisirs",
       "type": "debit",
       "isPrevision": false
     }
