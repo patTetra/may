@@ -31,6 +31,16 @@
       "isPrevision": false
     },
     {
+      "id": "1795010874664",
+      "date": "2026-11-17",
+      "compte": "courant",
+      "description": "Spotify",
+      "montant": 12.14,
+      "categorie": "🎉 Loisirs",
+      "type": "debit",
+      "isPrevision": false
+    },
+    {
       "id": "1795010839168",
       "date": "2026-11-16",
       "compte": "courant",
@@ -1147,12 +1157,12 @@
       "isPrevision": false
     },
     {
-      "id": "1795010874664",
+      "id": "1795010898334",
       "date": "2026-11-17",
       "compte": "courant",
-      "description": "Spotify",
-      "montant": 12.14,
-      "categorie": "🎉 Loisirs",
+      "description": "Lidl",
+      "montant": 4.33,
+      "categorie": "📦 Autre",
       "type": "debit",
       "isPrevision": false
     }
