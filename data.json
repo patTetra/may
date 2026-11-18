@@ -1,6 +1,16 @@
 {
   "operations": [
     {
+      "id": "1794414610531",
+      "date": "2026-11-11",
+      "compte": "courant",
+      "description": "Sécurité sociale remboursement ",
+      "montant": 9.45,
+      "categorie": "📦 Autre",
+      "type": "credit",
+      "isPrevision": false
+    },
+    {
       "id": "1794414444783",
       "date": "2026-11-10",
       "compte": "courant",
@@ -1097,13 +1107,13 @@
       "isPrevision": false
     },
     {
-      "id": "1794414610531",
-      "date": "2026-11-11",
+      "id": "1795010753834",
+      "date": "2026-11-18",
       "compte": "courant",
-      "description": "Sécurité sociale remboursement ",
-      "montant": 9.45,
-      "categorie": "📦 Autre",
-      "type": "credit",
+      "description": "Essence ",
+      "montant": 30.01,
+      "categorie": "🚗 Transport",
+      "type": "debit",
       "isPrevision": false
     }
   ]
